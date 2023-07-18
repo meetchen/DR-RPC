@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC -g -shared -Wl,-soname,libdrrpc.so -o libdrrpc.so CMakeFiles/drrpc.dir/drrpcapplication.cc.o CMakeFiles/drrpc.dir/rpcprovider.cc.o   -L/home/duanran/workSpace/C++_WorkSpace/DR-RPC/lib 

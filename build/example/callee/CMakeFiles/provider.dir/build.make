@@ -73,29 +73,29 @@ example/callee/CMakeFiles/provider.dir/userService.cc.o: example/callee/CMakeFil
 example/callee/CMakeFiles/provider.dir/userService.cc.o: ../example/callee/userService.cc
 example/callee/CMakeFiles/provider.dir/userService.cc.o: example/callee/CMakeFiles/provider.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object example/callee/CMakeFiles/provider.dir/userService.cc.o"
-	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee && /opt/rh/devtoolset-7/root/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT example/callee/CMakeFiles/provider.dir/userService.cc.o -MF CMakeFiles/provider.dir/userService.cc.o.d -o CMakeFiles/provider.dir/userService.cc.o -c /home/duanran/workSpace/C++_WorkSpace/DR-RPC/example/callee/userService.cc
+	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT example/callee/CMakeFiles/provider.dir/userService.cc.o -MF CMakeFiles/provider.dir/userService.cc.o.d -o CMakeFiles/provider.dir/userService.cc.o -c /home/duanran/workSpace/C++_WorkSpace/DR-RPC/example/callee/userService.cc
 
 example/callee/CMakeFiles/provider.dir/userService.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/provider.dir/userService.cc.i"
-	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee && /opt/rh/devtoolset-7/root/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duanran/workSpace/C++_WorkSpace/DR-RPC/example/callee/userService.cc > CMakeFiles/provider.dir/userService.cc.i
+	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duanran/workSpace/C++_WorkSpace/DR-RPC/example/callee/userService.cc > CMakeFiles/provider.dir/userService.cc.i
 
 example/callee/CMakeFiles/provider.dir/userService.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/provider.dir/userService.cc.s"
-	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee && /opt/rh/devtoolset-7/root/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duanran/workSpace/C++_WorkSpace/DR-RPC/example/callee/userService.cc -o CMakeFiles/provider.dir/userService.cc.s
+	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duanran/workSpace/C++_WorkSpace/DR-RPC/example/callee/userService.cc -o CMakeFiles/provider.dir/userService.cc.s
 
 example/callee/CMakeFiles/provider.dir/__/user.pb.cc.o: example/callee/CMakeFiles/provider.dir/flags.make
 example/callee/CMakeFiles/provider.dir/__/user.pb.cc.o: ../example/user.pb.cc
 example/callee/CMakeFiles/provider.dir/__/user.pb.cc.o: example/callee/CMakeFiles/provider.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object example/callee/CMakeFiles/provider.dir/__/user.pb.cc.o"
-	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee && /opt/rh/devtoolset-7/root/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT example/callee/CMakeFiles/provider.dir/__/user.pb.cc.o -MF CMakeFiles/provider.dir/__/user.pb.cc.o.d -o CMakeFiles/provider.dir/__/user.pb.cc.o -c /home/duanran/workSpace/C++_WorkSpace/DR-RPC/example/user.pb.cc
+	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT example/callee/CMakeFiles/provider.dir/__/user.pb.cc.o -MF CMakeFiles/provider.dir/__/user.pb.cc.o.d -o CMakeFiles/provider.dir/__/user.pb.cc.o -c /home/duanran/workSpace/C++_WorkSpace/DR-RPC/example/user.pb.cc
 
 example/callee/CMakeFiles/provider.dir/__/user.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/provider.dir/__/user.pb.cc.i"
-	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee && /opt/rh/devtoolset-7/root/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duanran/workSpace/C++_WorkSpace/DR-RPC/example/user.pb.cc > CMakeFiles/provider.dir/__/user.pb.cc.i
+	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duanran/workSpace/C++_WorkSpace/DR-RPC/example/user.pb.cc > CMakeFiles/provider.dir/__/user.pb.cc.i
 
 example/callee/CMakeFiles/provider.dir/__/user.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/provider.dir/__/user.pb.cc.s"
-	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee && /opt/rh/devtoolset-7/root/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duanran/workSpace/C++_WorkSpace/DR-RPC/example/user.pb.cc -o CMakeFiles/provider.dir/__/user.pb.cc.s
+	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duanran/workSpace/C++_WorkSpace/DR-RPC/example/user.pb.cc -o CMakeFiles/provider.dir/__/user.pb.cc.s
 
 # Object files for target provider
 provider_OBJECTS = \
@@ -108,6 +108,7 @@ provider_EXTERNAL_OBJECTS =
 ../bin/provider: example/callee/CMakeFiles/provider.dir/userService.cc.o
 ../bin/provider: example/callee/CMakeFiles/provider.dir/__/user.pb.cc.o
 ../bin/provider: example/callee/CMakeFiles/provider.dir/build.make
+../bin/provider: src/libdrrpc.so
 ../bin/provider: example/callee/CMakeFiles/provider.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../../../bin/provider"
 	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/provider.dir/link.txt --verbose=$(VERBOSE)

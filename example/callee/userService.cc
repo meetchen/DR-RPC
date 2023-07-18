@@ -1,6 +1,8 @@
-#include<iostream>;
-#include<string>;
-#include"user.pb.h";
+#include<iostream>
+#include<string>
+#include"user.pb.h"
+#include"drrpcapplication.h"
+#include"rpcprovider.h"
 
 class UserService : public::DUAN::UserServiceRpc
 {
@@ -30,8 +32,19 @@ class UserService : public::DUAN::UserServiceRpc
         }
 };
 
-int main()
+int main(int argc, char **argv)
 {
     std::cout << "Hello CMake" << std::endl;
+
+    //初始化框架
+    DrRpcApplication::Init(argc, argv);
+
+    // 发布rpc
+    RpcProvider pro;
+    pro.NofityService(new UserService());
+
+    // 启动服务
+    pro.Run();
+
     return 0;
 }

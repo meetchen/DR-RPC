@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named drrpc
+
+# Build rule for target.
+drrpc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 drrpc
+.PHONY : drrpc
+
+# fast build rule for target.
+drrpc/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/drrpc.dir/build.make src/CMakeFiles/drrpc.dir/build
+.PHONY : drrpc/fast
+
+#=============================================================================
 # Target rules for targets named provider
 
 # Build rule for target.
@@ -137,6 +150,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... drrpc"
 	@echo "... provider"
 .PHONY : help
 

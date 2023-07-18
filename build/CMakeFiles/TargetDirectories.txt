@@ -1,5 +1,8 @@
 /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/CMakeFiles/edit_cache.dir
 /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/CMakeFiles/rebuild_cache.dir
+/home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/src/CMakeFiles/drrpc.dir
+/home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/src/CMakeFiles/edit_cache.dir
+/home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/src/CMakeFiles/rebuild_cache.dir
 /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/CMakeFiles/edit_cache.dir
 /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/CMakeFiles/rebuild_cache.dir
 /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee/CMakeFiles/provider.dir

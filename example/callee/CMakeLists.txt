@@ -2,8 +2,5 @@ set(SRC_LIST userService.cc ../user.pb.cc)
 add_executable(provider ${SRC_LIST})
 
 # 链接 protoc 库
-target_link_libraries(provider protobuf)
+target_link_libraries(provider protobuf pthread drrpc)
 
-# 链接 pthread 库
-
-target_link_libraries(provider pthread)

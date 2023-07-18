@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package DUAN;
+
+option cc_generic_services = true;
+
+message ResultMsg
+{
+    int32 stateCode = 1;
+    string msg = 2;
+}
+
+message LoginRequest
+{
+    string name = 1;
+    string password = 2;
+}
+
+message LoginResponse
+{
+    ResultMsg msg = 1;
+    bool success = 2;
+}
+
+service UserServiceRpc
+{
+    rpc Login(LoginRequest) returns (LoginResponse);
+}

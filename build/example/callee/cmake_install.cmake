@@ -1,4 +1,4 @@
-# Install script for directory: /home/duanran/文档/C++_WorkSpace/DR-RPC/example/callee
+# Install script for directory: /home/duanran/workSpace/C++_WorkSpace/DR-RPC/example/callee
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

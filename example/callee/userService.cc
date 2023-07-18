@@ -29,3 +29,9 @@ class UserService : public::DUAN::UserServiceRpc
             done->Run();
         }
 };
+
+int main()
+{
+    std::cout << "Hello CMake" << std::endl;
+    return 0;
+}

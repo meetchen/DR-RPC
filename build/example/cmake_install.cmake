@@ -1,4 +1,4 @@
-# Install script for directory: /home/duanran/文档/C++_WorkSpace/DR-RPC/example
+# Install script for directory: /home/duanran/workSpace/C++_WorkSpace/DR-RPC/example
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/duanran/文档/C++_WorkSpace/DR-RPC/build/example/callee/cmake_install.cmake")
+  include("/home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/example/callee/cmake_install.cmake")
 
 endif()
 

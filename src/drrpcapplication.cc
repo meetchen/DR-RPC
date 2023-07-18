@@ -7,6 +7,6 @@ void DrRpcApplication::Init(int argc, char **argv)
 
 DrRpcApplication& DrRpcApplication::getInstance()
 {
-    static DrRpcApplication drrpc;
-    return drrpc;
+    static DrRpcApplication app;
+    return app;
 }

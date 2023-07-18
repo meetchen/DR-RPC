@@ -2,5 +2,10 @@
     "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
     "files.associations": {
         "*.inc": "cpp"
-    }
+    },
+    "extensions.supportVirtualWorkspaces": {
+        "zxh404.vscode-proto3": true
+    },
+    "protoc": {}
+
 }

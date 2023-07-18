@@ -2,6 +2,9 @@ syntax = "proto3";
 
 package test_proto;
 
+// 生成service方法
+option cc_generic_services = true;
+
 message LoginRequest
 {
     string name = 1;
@@ -14,4 +17,40 @@ message LoginResponse
     int32 errcode = 1;
     string errmsg = 2;
     bool success = 3;
+}
+
+message Result
+{
+    int32 stateCode = 1;
+    string msg = 2;
+}
+
+message User
+{
+    string name = 1;
+    uint32 age = 2;
+    enum Sex
+    {
+        MAN = 0;
+        WOMEN = 1;
+    }
+    Sex sex = 3;
+}
+
+message getUserLists
+{
+    bytes name = 1;
+}
+
+message UserLists
+{
+    Result res = 1;
+    bytes name = 2;
+    repeated User users = 3;
+}
+
+
+service myService
+{
+    rpc Login(LoginRequest) returns (LoginResponse);
 }

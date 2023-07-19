@@ -1,12 +1,14 @@
- #pragma once
+#pragma once
+#include "drrpcconfig.h"
+class DrRpcApplication
+{
+public:
+    static void Init(int argc, char **argv);
+    static DrRpcApplication &getInstance();
 
- class DrRpcApplication
- {
-    public:
-        static void Init(int argc, char **argv);
-        static DrRpcApplication& getInstance();
-    private:
-        DrRpcApplication(){}
-        DrRpcApplication(const DrRpcApplication& src) = delete;
-        DrRpcApplication(const DrRpcApplication&& src) = delete;
- };
+private:
+    static DrRpcConfig myConfig;
+    DrRpcApplication() {}
+    DrRpcApplication(const DrRpcApplication &src) = delete;
+    DrRpcApplication(const DrRpcApplication &&src) = delete;
+};

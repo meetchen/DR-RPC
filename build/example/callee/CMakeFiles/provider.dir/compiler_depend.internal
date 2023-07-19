@@ -545,5 +545,6 @@ example/callee/CMakeFiles/provider.dir/userService.cc.o
  /opt/rh/devtoolset-7/root/usr/include/c++/7/cassert
  /usr/local/include/google/protobuf/service.h
  /home/duanran/workSpace/C++_WorkSpace/DR-RPC/src/include/drrpcapplication.h
+ /home/duanran/workSpace/C++_WorkSpace/DR-RPC/src/include/drrpcconfig.h
  /home/duanran/workSpace/C++_WorkSpace/DR-RPC/src/include/rpcprovider.h
 

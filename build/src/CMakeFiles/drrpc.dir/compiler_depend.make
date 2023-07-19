@@ -4,22 +4,170 @@
 src/CMakeFiles/drrpc.dir/drrpcapplication.cc.o: ../src/drrpcapplication.cc \
   /usr/include/stdc-predef.h \
   ../src/include/drrpcapplication.h \
-  /usr/include/unistd.h \
+  ../src/include/drrpcconfig.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/unordered_map \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/utility \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/c++config.h \
+  /usr/include/bits/wordsize.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/os_defines.h \
   /usr/include/features.h \
   /usr/include/sys/cdefs.h \
-  /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-64.h \
-  /usr/include/bits/posix_opt.h \
-  /usr/include/bits/environments.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/cpu_defines.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_relops.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_pair.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/move.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/concept_check.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/type_traits \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/initializer_list \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/tuple \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/array \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/stdexcept \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/exception \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/exception.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/exception_ptr.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/exception_defines.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/cxxabi_init_exception.h \
+  /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include/stddef.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/typeinfo \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/hash_bytes.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/new \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/nested_exception.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/string \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stringfwd.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/memoryfwd.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/char_traits.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_algobase.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/functexcept.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/cpp_type_traits.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/ext/type_traits.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/ext/numeric_traits.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_iterator_base_types.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_iterator_base_funcs.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/debug/assertions.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_iterator.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ptr_traits.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/debug/debug.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/predefined_ops.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/postypes.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/stdio.h \
+  /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include/stdarg.h \
+  /usr/include/bits/wchar.h \
+  /usr/include/xlocale.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/cstdint \
+  /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include/stdint.h \
+  /usr/include/stdint.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/allocator.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/c++allocator.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/ext/new_allocator.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/localefwd.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/c++locale.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/clocale \
+  /usr/include/locale.h \
+  /usr/include/bits/locale.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/iosfwd \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/cctype \
+  /usr/include/ctype.h \
   /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h \
-  /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include/stddef.h \
+  /usr/include/endian.h \
+  /usr/include/bits/endian.h \
+  /usr/include/bits/byteswap.h \
+  /usr/include/bits/byteswap-16.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ostream_insert.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/cxxabi_forced.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_function.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/backward/binders.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/range_access.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/basic_string.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/ext/atomicity.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/gthr.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/time.h \
+  /usr/include/bits/sched.h \
+  /usr/include/bits/time.h \
+  /usr/include/bits/timex.h \
+  /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/setjmp.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/atomic_word.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/ext/alloc_traits.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/alloc_traits.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/ext/string_conversions.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/bits/waitflags.h \
+  /usr/include/bits/waitstatus.h \
+  /usr/include/sys/types.h \
+  /usr/include/sys/select.h \
+  /usr/include/bits/select.h \
+  /usr/include/bits/sigset.h \
+  /usr/include/sys/sysmacros.h \
+  /usr/include/alloca.h \
+  /usr/include/bits/stdlib-float.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/std_abs.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/cstdio \
+  /usr/include/libio.h \
+  /usr/include/_G_config.h \
+  /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/sys_errlist.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/cerrno \
+  /usr/include/errno.h \
+  /usr/include/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/functional_hash.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/basic_string.tcc \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/uses_allocator.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/invoke.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/ext/aligned_buffer.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/hashtable.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/hashtable_policy.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/unordered_map.h \
+  /usr/include/unistd.h \
+  /usr/include/bits/posix_opt.h \
+  /usr/include/bits/environments.h \
   /usr/include/bits/confname.h \
   /usr/include/getopt.h \
   /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/ostream \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/ios \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ios_base.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/locale_classes.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/locale_classes.tcc \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/system_error \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/error_constants.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/streambuf \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/streambuf.tcc \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/basic_ios.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/locale_facets.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/cwctype \
+  /usr/include/wctype.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/ctype_base.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/streambuf_iterator.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/ctype_inline.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/locale_facets.tcc \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/basic_ios.tcc \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ostream.tcc \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/istream \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/istream.tcc
+
+src/CMakeFiles/drrpc.dir/drrpcconfig.cc.o: ../src/drrpcconfig.cc \
+  /usr/include/stdc-predef.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream \
   /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/c++config.h \
+  /usr/include/bits/wordsize.h \
   /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/sys/cdefs.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/gnu/stubs-64.h \
   /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/cpu_defines.h \
   /opt/rh/devtoolset-7/root/usr/include/c++/7/ostream \
   /opt/rh/devtoolset-7/root/usr/include/c++/7/ios \
@@ -32,6 +180,7 @@ src/CMakeFiles/drrpc.dir/drrpcapplication.cc.o: ../src/drrpcapplication.cc \
   /usr/include/stdio.h \
   /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include/stdarg.h \
   /usr/include/bits/wchar.h \
+  /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include/stddef.h \
   /usr/include/xlocale.h \
   /opt/rh/devtoolset-7/root/usr/include/c++/7/exception \
   /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/exception.h \
@@ -69,6 +218,8 @@ src/CMakeFiles/drrpc.dir/drrpcapplication.cc.o: ../src/drrpcapplication.cc \
   /usr/include/bits/locale.h \
   /opt/rh/devtoolset-7/root/usr/include/c++/7/cctype \
   /usr/include/ctype.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/typesizes.h \
   /usr/include/endian.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/byteswap.h \
@@ -144,7 +295,24 @@ src/CMakeFiles/drrpc.dir/drrpcapplication.cc.o: ../src/drrpcapplication.cc \
   /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/basic_ios.tcc \
   /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ostream.tcc \
   /opt/rh/devtoolset-7/root/usr/include/c++/7/istream \
-  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/istream.tcc
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/istream.tcc \
+  ../src/include/drrpcconfig.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/unordered_map \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/utility \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_relops.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/tuple \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/array \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/uses_allocator.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/invoke.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/ext/aligned_buffer.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/hashtable.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/hashtable_policy.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/unordered_map.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/fstream \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/codecvt.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/basic_file.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/c++io.h \
+  /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/fstream.tcc
 
 src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
   /usr/include/stdc-predef.h \
@@ -386,33 +554,19 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_multimap.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/cxxabi_forced.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_map.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/exception_ptr.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_tree.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_function.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/map:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ostream_insert.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_construct.h:
 
-/usr/include/bits/waitflags.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_tempbuf.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ext/new_allocator.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_algo.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/c++allocator.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/allocator.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/string:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_set.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/memoryfwd.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/locale_classes.h:
-
-/usr/local/include/google/protobuf/stubs/macros.h:
-
-/usr/include/bits/setjmp.h:
+/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include/syslimits.h:
 
 /usr/include/bits/timex.h:
 
@@ -424,11 +578,15 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/ext/atomicity.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ios_base.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/limits:
 
-/usr/include/bits/environments.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/gthr.h:
 
-/usr/include/bits/byteswap.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_function.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ostream_insert.h:
+
+/usr/include/bits/waitflags.h:
 
 /usr/include/endian.h:
 
@@ -446,13 +604,41 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 
 /usr/include/bits/locale.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/map:
-
 /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/c++locale.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_pair.h:
 
+/opt/rh/devtoolset-7/root/usr/include/c++/7/ext/new_allocator.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/c++allocator.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/allocator.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/ext/alloc_traits.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/unordered_map:
+
+/usr/include/stdio.h:
+
 /opt/rh/devtoolset-7/root/usr/include/c++/7/cstdint:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/atomic_word.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/fstream:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/vector.tcc:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/sigthread.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/gnu/stubs.h:
+
+/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include/stdarg.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/locale_facets.h:
 
@@ -460,15 +646,47 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/predefined_ops.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/range_access.h:
+/usr/include/bits/setjmp.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_iterator_base_funcs.h:
+/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include/stddef.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/array:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/cwchar:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/debug/assertions.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/string:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_set.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/memoryfwd.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/cpu_defines.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/move.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_bvector.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/cxxabi_init_exception.h:
+
+/usr/include/linux/limits.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_iterator_base_types.h:
 
-/usr/include/wchar.h:
+../src/include/drrpcapplication.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ext/type_traits.h:
+/usr/include/sys/cdefs.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_relops.h:
+
+/usr/local/include/google/protobuf/port_undef.inc:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/cxxabi_forced.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/exception_ptr.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/debug/debug.h:
 
@@ -480,19 +698,41 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 
 /usr/include/byteswap.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/atomic_word.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/clocale:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/basic_string.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/cwchar:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/error_constants.h:
+
+../src/drrpcapplication.cc:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/utility:
+
+/usr/include/stdlib.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_iterator.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/os_defines.h:
 
 /usr/include/asm-generic/errno.h:
 
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/shared_ptr_base.h:
+
+/usr/include/features.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/cctype:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/wordsize.h:
+
 /usr/include/bits/pthreadtypes.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/cpp_type_traits.h:
+
+/usr/include/bits/byteswap.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/basic_file.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/localefwd.h:
 
@@ -502,81 +742,39 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/exception:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:
-
-/usr/include/asm-generic/param.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/cpu_defines.h:
-
-/usr/include/linux/limits.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/move.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_bvector.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/cxxabi_init_exception.h:
-
-/usr/include/bits/typesizes.h:
-
-/usr/include/bits/wchar.h:
-
-/usr/include/gnu/stubs.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/vector.tcc:
-
-/usr/include/bits/sigthread.h:
-
-/usr/include/bits/types.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_iterator.h:
-
-/usr/include/getopt.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_algobase.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/exception_defines.h:
 
-/usr/include/stdio.h:
+../src/include/drrpcconfig.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ext/alloc_traits.h:
-
-/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include/stdarg.h:
-
-../src/include/drrpcapplication.h:
-
-/usr/include/sys/cdefs.h:
-
-/usr/include/bits/posix_opt.h:
-
-../src/drrpcapplication.cc:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/shared_ptr_base.h:
-
-/usr/include/features.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/cctype:
-
-/usr/include/unistd.h:
-
-/usr/include/bits/endian.h:
-
-/usr/include/bits/wordsize.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_algobase.h:
+/usr/include/getopt.h:
 
 /usr/include/gnu/stubs-64.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iosfwd:
+/usr/include/wchar.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ext/string_conversions.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/ext/type_traits.h:
 
-/usr/include/bits/time.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/stdexcept:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/uses_allocator.h:
+/usr/include/locale.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stringfwd.h:
+/usr/include/bits/xopen_lim.h:
 
-/usr/include/wctype.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/exception.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/initializer_list:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/alloc_traits.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/tuple:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/hashtable.h:
+
+/usr/include/bits/sigset.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/istream:
+
+/usr/include/bits/waitstatus.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/hash_bytes.h:
 
@@ -584,25 +782,21 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/functional_hash.h:
 
+/usr/include/wctype.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/initializer_list:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stringfwd.h:
+
 /usr/include/sys/param.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/new:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/debug/assertions.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/ext/string_conversions.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/char_traits.h:
+/usr/include/bits/time.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/exception.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_map.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ios:
-
-/usr/include/bits/waitstatus.h:
-
-/usr/include/bits/sigset.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/istream:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/uses_allocator.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/postypes.h:
 
@@ -612,27 +806,21 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 
 /usr/include/_G_config.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/clocale:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/char_traits.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/basic_string.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/range_access.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/error_constants.h:
-
-/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include/syslimits.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_iterator_base_funcs.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/cstdlib:
-
-/usr/include/stdlib.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/utility:
 
 /usr/include/sys/types.h:
 
 /usr/include/sys/select.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/cwctype:
-
 /opt/rh/devtoolset-7/root/usr/include/c++/7/ext/aligned_buffer.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/cwctype:
 
 /usr/include/errno.h:
 
@@ -641,6 +829,10 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 /usr/include/alloca.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ostream.tcc:
+
+/usr/include/bits/signum.h:
+
+/usr/include/bits/stdlib-float.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/concept_check.h:
 
@@ -660,7 +852,11 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 
 /usr/include/linux/errno.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_tree.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/algorithm:
+
+/usr/include/bits/posix2_lim.h:
+
+/usr/include/asm/errno.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/shared_ptr_atomic.h:
 
@@ -670,6 +866,38 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/basic_string.tcc:
 
+/usr/include/xlocale.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/invoke.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/hashtable_policy.h:
+
+/usr/include/unistd.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_heap.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/environments.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ios_base.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/unordered_map.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/c++io.h:
+
+/usr/include/asm-generic/param.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/ios:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/locale_classes.h:
+
+/usr/local/include/google/protobuf/stubs/macros.h:
+
 /opt/rh/devtoolset-7/root/usr/include/c++/7/ext/numeric_traits.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/typeinfo:
@@ -678,15 +906,7 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/system_error:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/stdexcept:
-
-/usr/include/locale.h:
-
-/usr/include/bits/xopen_lim.h:
-
 /opt/rh/devtoolset-7/root/usr/include/c++/7/streambuf:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_tempbuf.h:
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/streambuf.tcc:
 
@@ -704,6 +924,16 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/istream.tcc:
 
+../src/drrpcconfig.cc:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/cstddef:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/iosfwd:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/codecvt.h:
+
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/fstream.tcc:
+
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/functexcept.h:
 
 ../src/rpcprovider.cc:
@@ -712,17 +942,7 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 
 /usr/local/include/google/protobuf/stubs/callback.h:
 
-/usr/include/bits/posix2_lim.h:
-
-/usr/include/asm/errno.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/algorithm:
-
 /opt/rh/devtoolset-7/root/usr/include/c++/7/stdlib.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/cstddef:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_construct.h:
 
 /usr/include/string.h:
 
@@ -731,10 +951,6 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 /usr/local/include/google/protobuf/stubs/platform_macros.h:
 
 /usr/local/include/google/protobuf/stubs/common.h:
-
-/usr/include/bits/confname.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_heap.h:
 
 /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include/limits.h:
 
@@ -750,23 +966,17 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 
 /usr/include/signal.h:
 
-/usr/include/bits/stdlib-float.h:
-
-/usr/include/bits/signum.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/alloc_traits.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/tuple:
-
 /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/atomic_lockfree_defines.h:
 
 /usr/include/bits/siginfo.h:
 
 /usr/include/bits/sigaction.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux/bits/gthr.h:
+/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/algorithmfwd.h:
 
-/opt/rh/devtoolset-7/root/usr/include/c++/7/limits:
+/usr/include/pthread.h:
+
+/usr/include/bits/sigcontext.h:
 
 /usr/include/bits/sched.h:
 
@@ -777,23 +987,3 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
 /usr/include/linux/param.h:
 
 /usr/include/asm/param.h:
-
-/usr/local/include/google/protobuf/port_undef.inc:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_relops.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/stl_algo.h:
-
-/usr/include/pthread.h:
-
-/usr/include/bits/sigcontext.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/algorithmfwd.h:
-
-/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include/stddef.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/array:
-
-/usr/include/xlocale.h:
-
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/invoke.h:

@@ -5,6 +5,11 @@
 
 DrRpcConfig DrRpcApplication::myConfig;
 
+DrRpcConfig& DrRpcApplication::getConfigMap() 
+{
+    return myConfig;
+}
+
 void showArgsHelp()
 {
     std::cout << "format : command -c <config file> " << std::endl;
@@ -38,6 +43,7 @@ void DrRpcApplication::Init(int argc, char **argv)
 
     myConfig.loadConfigFile(configFile.c_str());
     std::cout << "rpcserverip:" << myConfig.getConfig("rpcserverip") << std::endl;
+    std::cout << "rpcserverport:" << myConfig.getConfig("rpcserverport") << std::endl;
 }
 
 DrRpcApplication &DrRpcApplication::getInstance()

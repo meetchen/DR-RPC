@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/drrpc.dir/drrpcapplication.cc.o"
   "CMakeFiles/drrpc.dir/drrpcapplication.cc.o.d"
+  "CMakeFiles/drrpc.dir/drrpcconfig.cc.o"
+  "CMakeFiles/drrpc.dir/drrpcconfig.cc.o.d"
   "CMakeFiles/drrpc.dir/rpcprovider.cc.o"
   "CMakeFiles/drrpc.dir/rpcprovider.cc.o.d"
   "libdrrpc.pdb"

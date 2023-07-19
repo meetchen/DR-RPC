@@ -543,10 +543,13 @@ example/callee/CMakeFiles/provider.dir/userService.cc.o: ../example/callee/userS
   /opt/rh/devtoolset-7/root/usr/include/c++/7/cassert \
   /usr/local/include/google/protobuf/service.h \
   ../src/include/drrpcapplication.h \
+  ../src/include/drrpcconfig.h \
   ../src/include/rpcprovider.h
 
 
 ../src/include/rpcprovider.h:
+
+../src/include/drrpcconfig.h:
 
 ../src/include/drrpcapplication.h:
 

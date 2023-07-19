@@ -8,4 +8,5 @@ public:
     std::string getConfig(const char *key);
 private:
     std::unordered_map<std::string, std::string> myConfigMap;
+    void trim(std::string &str);
 };

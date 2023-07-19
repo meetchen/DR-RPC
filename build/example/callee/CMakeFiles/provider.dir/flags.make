@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/duanran/workSpace/C++_WorkSpace/DR-RPC/src/include -I/home/duanran/workSpace/C++_WorkSpace/DR-RPC/example
 
-CXX_FLAGS = -g
+CXX_FLAGS = 
 

@@ -178,6 +178,30 @@ drrpcconfig.cc.s:
 	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/drrpc.dir/build.make src/CMakeFiles/drrpc.dir/drrpcconfig.cc.s
 .PHONY : drrpcconfig.cc.s
 
+drrpcheader.pb.o: drrpcheader.pb.cc.o
+.PHONY : drrpcheader.pb.o
+
+# target to build an object file
+drrpcheader.pb.cc.o:
+	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/drrpc.dir/build.make src/CMakeFiles/drrpc.dir/drrpcheader.pb.cc.o
+.PHONY : drrpcheader.pb.cc.o
+
+drrpcheader.pb.i: drrpcheader.pb.cc.i
+.PHONY : drrpcheader.pb.i
+
+# target to preprocess a source file
+drrpcheader.pb.cc.i:
+	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/drrpc.dir/build.make src/CMakeFiles/drrpc.dir/drrpcheader.pb.cc.i
+.PHONY : drrpcheader.pb.cc.i
+
+drrpcheader.pb.s: drrpcheader.pb.cc.s
+.PHONY : drrpcheader.pb.s
+
+# target to generate assembly for a file
+drrpcheader.pb.cc.s:
+	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/drrpc.dir/build.make src/CMakeFiles/drrpc.dir/drrpcheader.pb.cc.s
+.PHONY : drrpcheader.pb.cc.s
+
 rpcprovider.o: rpcprovider.cc.o
 .PHONY : rpcprovider.o
 
@@ -217,6 +241,9 @@ help:
 	@echo "... drrpcconfig.o"
 	@echo "... drrpcconfig.i"
 	@echo "... drrpcconfig.s"
+	@echo "... drrpcheader.pb.o"
+	@echo "... drrpcheader.pb.i"
+	@echo "... drrpcheader.pb.s"
 	@echo "... rpcprovider.o"
 	@echo "... rpcprovider.i"
 	@echo "... rpcprovider.s"

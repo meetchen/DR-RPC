@@ -1,2 +1,2 @@
-/usr/bin/ar qc libdrrpc.a CMakeFiles/drrpc.dir/drrpcapplication.cc.o CMakeFiles/drrpc.dir/drrpcconfig.cc.o CMakeFiles/drrpc.dir/rpcprovider.cc.o
+/usr/bin/ar qc libdrrpc.a CMakeFiles/drrpc.dir/drrpcapplication.cc.o CMakeFiles/drrpc.dir/drrpcconfig.cc.o CMakeFiles/drrpc.dir/drrpcheader.pb.cc.o CMakeFiles/drrpc.dir/rpcprovider.cc.o
 /usr/bin/ranlib libdrrpc.a

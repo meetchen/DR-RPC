@@ -97,10 +97,24 @@ src/CMakeFiles/drrpc.dir/drrpcconfig.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drrpc.dir/drrpcconfig.cc.s"
 	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duanran/workSpace/C++_WorkSpace/DR-RPC/src/drrpcconfig.cc -o CMakeFiles/drrpc.dir/drrpcconfig.cc.s
 
+src/CMakeFiles/drrpc.dir/drrpcheader.pb.cc.o: src/CMakeFiles/drrpc.dir/flags.make
+src/CMakeFiles/drrpc.dir/drrpcheader.pb.cc.o: ../src/drrpcheader.pb.cc
+src/CMakeFiles/drrpc.dir/drrpcheader.pb.cc.o: src/CMakeFiles/drrpc.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/drrpc.dir/drrpcheader.pb.cc.o"
+	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/drrpc.dir/drrpcheader.pb.cc.o -MF CMakeFiles/drrpc.dir/drrpcheader.pb.cc.o.d -o CMakeFiles/drrpc.dir/drrpcheader.pb.cc.o -c /home/duanran/workSpace/C++_WorkSpace/DR-RPC/src/drrpcheader.pb.cc
+
+src/CMakeFiles/drrpc.dir/drrpcheader.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/drrpc.dir/drrpcheader.pb.cc.i"
+	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duanran/workSpace/C++_WorkSpace/DR-RPC/src/drrpcheader.pb.cc > CMakeFiles/drrpc.dir/drrpcheader.pb.cc.i
+
+src/CMakeFiles/drrpc.dir/drrpcheader.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drrpc.dir/drrpcheader.pb.cc.s"
+	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duanran/workSpace/C++_WorkSpace/DR-RPC/src/drrpcheader.pb.cc -o CMakeFiles/drrpc.dir/drrpcheader.pb.cc.s
+
 src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: src/CMakeFiles/drrpc.dir/flags.make
 src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc
 src/CMakeFiles/drrpc.dir/rpcprovider.cc.o: src/CMakeFiles/drrpc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/drrpc.dir/rpcprovider.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/drrpc.dir/rpcprovider.cc.o"
 	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/drrpc.dir/rpcprovider.cc.o -MF CMakeFiles/drrpc.dir/rpcprovider.cc.o.d -o CMakeFiles/drrpc.dir/rpcprovider.cc.o -c /home/duanran/workSpace/C++_WorkSpace/DR-RPC/src/rpcprovider.cc
 
 src/CMakeFiles/drrpc.dir/rpcprovider.cc.i: cmake_force
@@ -115,6 +129,7 @@ src/CMakeFiles/drrpc.dir/rpcprovider.cc.s: cmake_force
 drrpc_OBJECTS = \
 "CMakeFiles/drrpc.dir/drrpcapplication.cc.o" \
 "CMakeFiles/drrpc.dir/drrpcconfig.cc.o" \
+"CMakeFiles/drrpc.dir/drrpcheader.pb.cc.o" \
 "CMakeFiles/drrpc.dir/rpcprovider.cc.o"
 
 # External object files for target drrpc
@@ -122,10 +137,11 @@ drrpc_EXTERNAL_OBJECTS =
 
 src/libdrrpc.a: src/CMakeFiles/drrpc.dir/drrpcapplication.cc.o
 src/libdrrpc.a: src/CMakeFiles/drrpc.dir/drrpcconfig.cc.o
+src/libdrrpc.a: src/CMakeFiles/drrpc.dir/drrpcheader.pb.cc.o
 src/libdrrpc.a: src/CMakeFiles/drrpc.dir/rpcprovider.cc.o
 src/libdrrpc.a: src/CMakeFiles/drrpc.dir/build.make
 src/libdrrpc.a: src/CMakeFiles/drrpc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libdrrpc.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libdrrpc.a"
 	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/src && $(CMAKE_COMMAND) -P CMakeFiles/drrpc.dir/cmake_clean_target.cmake
 	cd /home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drrpc.dir/link.txt --verbose=$(VERBOSE)
 

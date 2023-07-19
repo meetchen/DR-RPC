@@ -18,7 +18,8 @@
 		"files" : 
 		[
 			"example/callee/CMakeLists.txt",
-			"CMakeLists.txt"
+			"CMakeLists.txt",
+			"src/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -47,6 +48,15 @@
 				"parent" : 0
 			},
 			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 7,
+				"parent" : 5
+			},
+			{
 				"command" : 3,
 				"file" : 1,
 				"line" : 12,
@@ -72,11 +82,11 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 5,
+					"backtrace" : 7,
 					"path" : "/home/duanran/workSpace/C++_WorkSpace/DR-RPC/src/include"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 8,
 					"path" : "/home/duanran/workSpace/C++_WorkSpace/DR-RPC/example"
 				}
 			],
@@ -114,7 +124,12 @@
 				"role" : "libraryPath"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/home/duanran/workSpace/C++_WorkSpace/DR-RPC/lib:/home/duanran/workSpace/C++_WorkSpace/DR-RPC/build/src",
+				"fragment" : "-Wl,-rpath,/home/duanran/workSpace/C++_WorkSpace/DR-RPC/lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "../../src/libdrrpc.a",
 				"role" : "libraries"
 			},
 			{
@@ -123,13 +138,18 @@
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 4,
-				"fragment" : "-lpthread",
+				"backtrace" : 6,
+				"fragment" : "-lmuduo_net",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 4,
-				"fragment" : "../../src/libdrrpc.so",
+				"backtrace" : 6,
+				"fragment" : "-lmuduo_base",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "-lpthread",
 				"role" : "libraries"
 			}
 		],

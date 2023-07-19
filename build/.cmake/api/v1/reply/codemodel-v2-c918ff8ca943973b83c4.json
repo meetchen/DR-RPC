@@ -89,14 +89,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "drrpc::@145eef247bfb46b6828c",
-					"jsonFile" : "target-drrpc-Debug-c0283ec8e5e4bd6a4d11.json",
+					"jsonFile" : "target-drrpc-Debug-a7ff3aabe8329fd0cc26.json",
 					"name" : "drrpc",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "provider::@493cd8b262c97a98b12b",
-					"jsonFile" : "target-provider-Debug-65fc00de6d0d68dabd2c.json",
+					"jsonFile" : "target-provider-Debug-53e087f831dd71fdcf93.json",
 					"name" : "provider",
 					"projectIndex" : 0
 				}

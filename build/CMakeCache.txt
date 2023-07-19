@@ -217,6 +217,9 @@ DR-RPC_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 DR-RPC_SOURCE_DIR:STATIC=/home/duanran/workSpace/C++_WorkSpace/DR-RPC
 
+//Dependencies for the target
+drrpc_LIB_DEPENDS:STATIC=general;muduo_net;general;muduo_base;general;pthread;
+
 
 ########################
 # INTERNAL cache entries

@@ -1164,6 +1164,18 @@
 			],
 			"type" : "STATIC",
 			"value" : "/home/duanran/workSpace/C++_WorkSpace/DR-RPC"
+		},
+		{
+			"name" : "drrpc_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;muduo_net;general;muduo_base;general;pthread;"
 		}
 	],
 	"kind" : "cache",

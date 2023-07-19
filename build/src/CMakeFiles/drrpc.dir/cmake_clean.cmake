@@ -5,8 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/drrpc.dir/drrpcconfig.cc.o.d"
   "CMakeFiles/drrpc.dir/rpcprovider.cc.o"
   "CMakeFiles/drrpc.dir/rpcprovider.cc.o.d"
+  "libdrrpc.a"
   "libdrrpc.pdb"
-  "libdrrpc.so"
 )
 
 # Per-language clean rules from dependency scanning.

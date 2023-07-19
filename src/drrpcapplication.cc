@@ -42,8 +42,8 @@ void DrRpcApplication::Init(int argc, char **argv)
     }
 
     myConfig.loadConfigFile(configFile.c_str());
-    std::cout << "rpcserverip:" << myConfig.getConfig("rpcserverip") << std::endl;
-    std::cout << "rpcserverport:" << myConfig.getConfig("rpcserverport") << std::endl;
+    // std::cout << "rpcserverip:" << myConfig.getConfig("rpcserverip") << std::endl;
+    // std::cout << "rpcserverport:" << myConfig.getConfig("rpcserverport") << std::endl;
 }
 
 DrRpcApplication &DrRpcApplication::getInstance()

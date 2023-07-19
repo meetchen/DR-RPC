@@ -1,8 +1,9 @@
 {
+	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "src/libdrrpc.so"
+			"path" : "src/libdrrpc.a"
 		}
 	],
 	"backtrace" : 1,
@@ -11,7 +12,6 @@
 		"commands" : 
 		[
 			"add_library",
-			"link_directories",
 			"include_directories"
 		],
 		"files" : 
@@ -36,17 +36,11 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 16,
-				"parent" : 2
-			},
-			{
-				"command" : 2,
-				"file" : 1,
 				"line" : 12,
 				"parent" : 2
 			},
 			{
-				"command" : 2,
+				"command" : 1,
 				"file" : 1,
 				"line" : 13,
 				"parent" : 2
@@ -59,23 +53,17 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -fPIC"
-				}
-			],
-			"defines" : 
-			[
-				{
-					"define" : "drrpc_EXPORTS"
+					"fragment" : "-g"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "/home/duanran/workSpace/C++_WorkSpace/DR-RPC/src/include"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 4,
 					"path" : "/home/duanran/workSpace/C++_WorkSpace/DR-RPC/example"
 				}
 			],
@@ -89,24 +77,8 @@
 		}
 	],
 	"id" : "drrpc::@145eef247bfb46b6828c",
-	"link" : 
-	{
-		"commandFragments" : 
-		[
-			{
-				"fragment" : "",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "-L/home/duanran/workSpace/C++_WorkSpace/DR-RPC/lib",
-				"role" : "libraryPath"
-			}
-		],
-		"language" : "CXX"
-	},
 	"name" : "drrpc",
-	"nameOnDisk" : "libdrrpc.so",
+	"nameOnDisk" : "libdrrpc.a",
 	"paths" : 
 	{
 		"build" : "src",
@@ -145,5 +117,5 @@
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "SHARED_LIBRARY"
+	"type" : "STATIC_LIBRARY"
 }

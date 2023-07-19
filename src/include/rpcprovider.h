@@ -12,7 +12,7 @@ public:
     void Run();
 
 private:
-    muduo::net::EventLoop myEventLoop;
+    muduo::net::EventLoop eventLoop;
 
     struct ServiceInfo
     {

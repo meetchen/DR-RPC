@@ -29,9 +29,28 @@ void RpcProvider::NofityService(google::protobuf::Service *service)
 
 void RpcProvider::Run()
 {
-    std::string ip = DrRpcApplication::getConfigMap().getConfig("rpcserverip");
-    std::string port = DrRpcApplication::getConfigMap().getConfig("rpcserverport");
+    // 读取配置文件rpcserver的信息
+    std::string ip = DrRpcApplication::getInstance().getConfigMap().getConfig("rpcserverip");
+    uint16_t port = atoi(DrRpcApplication::getInstance().getConfigMap().getConfig("rpcserverport").c_str());
+    muduo::net::InetAddress address(ip, port);
+
+    // 创建TcpServer对象
+    muduo::net::TcpServer server(&eventLoop, address, "RpcProvider");
+
+    // 绑定连接回调和消息读写回调方法  分离了网络代码和业务代码
+    server.setConnectionCallback(std::bind(&RpcProvider::onConneciton, this, std::placeholders::_1));
+    server.setMessageCallback(std::bind(&RpcProvider::onMessage, this, std::placeholders::_1, 
+            std::placeholders::_2, std::placeholders::_3));
+
+    // 设置muduo库的线程数量
+    server.setThreadNum(4);
     
+    // rpc服务端准备启动，打印信息
+    std::cout << "RpcProvider start service at ip:" << ip << " port:" << port << std::endl;
+
+    // 启动网络服务
+    server.start();
+    eventLoop.loop(); 
 }
 
 // 连接回调
@@ -57,6 +76,7 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr & connn, muduo::n
     std::string service_name;
     std::string method_name;
     uint32_t args_size;
+
     if (rpcHeader.ParseFromString(rpc_header_str))
     {
         // 数据头反序列化成功

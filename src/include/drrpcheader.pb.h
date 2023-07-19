@@ -208,20 +208,13 @@ class RpcHeader :
   std::string* _internal_mutable_methodname();
   public:
 
-  // bytes argsSize = 3;
+  // uint32 argsSize = 3;
   void clear_argssize();
-  const std::string& argssize() const;
-  void set_argssize(const std::string& value);
-  void set_argssize(std::string&& value);
-  void set_argssize(const char* value);
-  void set_argssize(const void* value, size_t size);
-  std::string* mutable_argssize();
-  std::string* release_argssize();
-  void set_allocated_argssize(std::string* argssize);
+  ::PROTOBUF_NAMESPACE_ID::uint32 argssize() const;
+  void set_argssize(::PROTOBUF_NAMESPACE_ID::uint32 value);
   private:
-  const std::string& _internal_argssize() const;
-  void _internal_set_argssize(const std::string& value);
-  std::string* _internal_mutable_argssize();
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_argssize() const;
+  void _internal_set_argssize(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
   // @@protoc_insertion_point(class_scope:duan.RpcHeader)
@@ -231,7 +224,7 @@ class RpcHeader :
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr servicename_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr methodname_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr argssize_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 argssize_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_drrpcheader_2eproto;
 };
@@ -366,64 +359,24 @@ inline void RpcHeader::set_allocated_methodname(std::string* methodname) {
   // @@protoc_insertion_point(field_set_allocated:duan.RpcHeader.methodName)
 }
 
-// bytes argsSize = 3;
+// uint32 argsSize = 3;
 inline void RpcHeader::clear_argssize() {
-  argssize_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  argssize_ = 0u;
 }
-inline const std::string& RpcHeader::argssize() const {
+inline ::PROTOBUF_NAMESPACE_ID::uint32 RpcHeader::_internal_argssize() const {
+  return argssize_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 RpcHeader::argssize() const {
   // @@protoc_insertion_point(field_get:duan.RpcHeader.argsSize)
   return _internal_argssize();
 }
-inline void RpcHeader::set_argssize(const std::string& value) {
+inline void RpcHeader::_internal_set_argssize(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  argssize_ = value;
+}
+inline void RpcHeader::set_argssize(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_set_argssize(value);
   // @@protoc_insertion_point(field_set:duan.RpcHeader.argsSize)
-}
-inline std::string* RpcHeader::mutable_argssize() {
-  // @@protoc_insertion_point(field_mutable:duan.RpcHeader.argsSize)
-  return _internal_mutable_argssize();
-}
-inline const std::string& RpcHeader::_internal_argssize() const {
-  return argssize_.GetNoArena();
-}
-inline void RpcHeader::_internal_set_argssize(const std::string& value) {
-  
-  argssize_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-}
-inline void RpcHeader::set_argssize(std::string&& value) {
-  
-  argssize_.SetNoArena(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:duan.RpcHeader.argsSize)
-}
-inline void RpcHeader::set_argssize(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  argssize_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:duan.RpcHeader.argsSize)
-}
-inline void RpcHeader::set_argssize(const void* value, size_t size) {
-  
-  argssize_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:duan.RpcHeader.argsSize)
-}
-inline std::string* RpcHeader::_internal_mutable_argssize() {
-  
-  return argssize_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline std::string* RpcHeader::release_argssize() {
-  // @@protoc_insertion_point(field_release:duan.RpcHeader.argsSize)
-  
-  return argssize_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline void RpcHeader::set_allocated_argssize(std::string* argssize) {
-  if (argssize != nullptr) {
-    
-  } else {
-    
-  }
-  argssize_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), argssize);
-  // @@protoc_insertion_point(field_set_allocated:duan.RpcHeader.argsSize)
 }
 
 #ifdef __GNUC__

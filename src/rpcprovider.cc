@@ -4,6 +4,7 @@
 #include"drrpcapplication.h"
 #include<muduo/net/TcpServer.h>
 #include<google/protobuf/descriptor.h>
+#include"drrpcheader.pb.h"
 void RpcProvider::NofityService(google::protobuf::Service *service)
 {
     ServiceInfo service_info;
@@ -15,15 +16,12 @@ void RpcProvider::NofityService(google::protobuf::Service *service)
     // 获取服务对象service的方法的数量
     int methodCnt = pserviceDesc->method_count();
 
-
-
     for (int i=0; i < methodCnt; ++i)
     {
         // 获取了服务对象指定下标的服务方法的描述（抽象描述） UserService   Login
         const google::protobuf::MethodDescriptor* pmethodDesc = pserviceDesc->method(i);
         std::string method_name = pmethodDesc->name();
         service_info.methodMap.emplace(method_name, pmethodDesc);
-
     }
     service_info.service = service;
     serviceMap.emplace(service_name, service_info);
@@ -39,11 +37,49 @@ void RpcProvider::Run()
 // 连接回调
 void RpcProvider::onConneciton(const muduo::net::TcpConnectionPtr &)
 {
+    
 
 }
 
 // 消息读写回调
-void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &, muduo::net::Buffer *, muduo::Timestamp)
+void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr & connn, muduo::net::Buffer * buffer, muduo::Timestamp)
 {
+    // 网络上接收的远程rpc调用请求的字符流    Login args
+    std::string recv_buf = buffer->retrieveAllAsString();
 
+    // 从字符流中读取前4个字节的内容
+    uint32_t header_size = 0;
+    recv_buf.copy((char*)&header_size, 4, 0);
+
+    // 根据header_size读取数据头的原始字符流，反序列化数据，得到rpc请求的详细信息
+    std::string rpc_header_str = recv_buf.substr(4, header_size);
+    duan::RpcHeader rpcHeader;
+    std::string service_name;
+    std::string method_name;
+    uint32_t args_size;
+    if (rpcHeader.ParseFromString(rpc_header_str))
+    {
+        // 数据头反序列化成功
+        service_name = rpcHeader.servicename();
+        method_name = rpcHeader.methodname();
+        args_size = rpcHeader.argssize();
+    }
+    else
+    {
+        // 数据头反序列化失败
+        std::cout << "rpc_header_str:" << rpc_header_str << " parse error!" << std::endl;
+        return;
+    }
+
+    // 获取rpc方法参数的字符流数据
+    std::string args_str = recv_buf.substr(4 + header_size, args_size);
+
+    // 打印调试信息
+    std::cout << "============================================" << std::endl;
+    std::cout << "header_size: " << header_size << std::endl; 
+    std::cout << "rpc_header_str: " << rpc_header_str << std::endl; 
+    std::cout << "service_name: " << service_name << std::endl; 
+    std::cout << "method_name: " << method_name << std::endl; 
+    std::cout << "args_str: " << args_str << std::endl; 
+    std::cout << "============================================" << std::endl;
 }

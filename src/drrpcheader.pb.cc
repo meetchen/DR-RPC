@@ -59,7 +59,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 const char descriptor_table_protodef_drrpcheader_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\021drrpcheader.proto\022\004duan\"F\n\tRpcHeader\022\023"
   "\n\013serviceName\030\001 \001(\014\022\022\n\nmethodName\030\002 \001(\014\022"
-  "\020\n\010argsSize\030\003 \001(\014B\003\200\001\001b\006proto3"
+  "\020\n\010argsSize\030\003 \001(\rB\003\200\001\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_drrpcheader_2eproto_deps[1] = {
 };
@@ -104,10 +104,7 @@ RpcHeader::RpcHeader(const RpcHeader& from)
   if (!from._internal_methodname().empty()) {
     methodname_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.methodname_);
   }
-  argssize_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_argssize().empty()) {
-    argssize_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.argssize_);
-  }
+  argssize_ = from.argssize_;
   // @@protoc_insertion_point(copy_constructor:duan.RpcHeader)
 }
 
@@ -115,7 +112,7 @@ void RpcHeader::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RpcHeader_drrpcheader_2eproto.base);
   servicename_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   methodname_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  argssize_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  argssize_ = 0u;
 }
 
 RpcHeader::~RpcHeader() {
@@ -126,7 +123,6 @@ RpcHeader::~RpcHeader() {
 void RpcHeader::SharedDtor() {
   servicename_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   methodname_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  argssize_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void RpcHeader::SetCachedSize(int size) const {
@@ -146,7 +142,7 @@ void RpcHeader::Clear() {
 
   servicename_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   methodname_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  argssize_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  argssize_ = 0u;
   _internal_metadata_.Clear();
 }
 
@@ -173,11 +169,10 @@ const char* RpcHeader::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bytes argsSize = 3;
+      // uint32 argsSize = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          auto str = _internal_mutable_argssize();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          argssize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -219,10 +214,10 @@ failure:
         2, this->_internal_methodname(), target);
   }
 
-  // bytes argsSize = 3;
-  if (this->argssize().size() > 0) {
-    target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_argssize(), target);
+  // uint32 argsSize = 3;
+  if (this->argssize() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_argssize(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -255,10 +250,10 @@ size_t RpcHeader::ByteSizeLong() const {
         this->_internal_methodname());
   }
 
-  // bytes argsSize = 3;
-  if (this->argssize().size() > 0) {
+  // uint32 argsSize = 3;
+  if (this->argssize() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
         this->_internal_argssize());
   }
 
@@ -301,9 +296,8 @@ void RpcHeader::MergeFrom(const RpcHeader& from) {
 
     methodname_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.methodname_);
   }
-  if (from.argssize().size() > 0) {
-
-    argssize_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.argssize_);
+  if (from.argssize() != 0) {
+    _internal_set_argssize(from._internal_argssize());
   }
 }
 
@@ -332,8 +326,7 @@ void RpcHeader::InternalSwap(RpcHeader* other) {
     GetArenaNoVirtual());
   methodname_.Swap(&other->methodname_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  argssize_.Swap(&other->argssize_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  swap(argssize_, other->argssize_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RpcHeader::GetMetadata() const {

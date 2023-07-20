@@ -30,6 +30,7 @@ void RpcProvider::NofityService(google::protobuf::Service *service)
     }
     service_info.service = service;
     serviceMap.emplace(service_name, service_info);
+    std::cout << "NofityService Finish" << std::endl;
 }
 
 void RpcProvider::Run()
@@ -45,6 +46,7 @@ void RpcProvider::Run()
 
     // 绑定连接回调和消息读写回调方法  分离了网络代码和业务代码
     server.setConnectionCallback(std::bind(&RpcProvider::onConneciton, this, std::placeholders::_1));
+
     server.setMessageCallback(std::bind(&RpcProvider::onMessage, this, std::placeholders::_1,
                                         std::placeholders::_2, std::placeholders::_3));
 
@@ -52,7 +54,7 @@ void RpcProvider::Run()
     server.setThreadNum(4);
 
     // rpc服务端准备启动，打印信息
-    std::cout << "RpcProvider start service at ip:" << ip << " port:" << port << std::endl;
+    std::cout << "RpcProvider start service at ip: " << ip << " port:" << port << std::endl;
 
     // 启动网络服务
     server.start();
@@ -60,13 +62,28 @@ void RpcProvider::Run()
 }
 
 // 连接回调
-void RpcProvider::onConneciton(const muduo::net::TcpConnectionPtr &)
+void RpcProvider::onConneciton(const muduo::net::TcpConnectionPtr &conn)
 {
+    if (!conn->connected())
+    {
+        // 和rpc client的连接断开了
+        conn->shutdown();
+    }
 }
 
 // 消息读写回调
 void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net::Buffer *buffer, muduo::Timestamp)
 {
+
+    if (buffer == nullptr)
+    {
+        std::cout <<" buffer is nullptr " << std::endl;
+        exit(EXIT_FAILURE);
+    }
+    else
+    {
+        std::cout <<" RpcProvider::onMessage " << std::endl;
+    }
     // 网络上接收的远程rpc调用请求的字符流    Login args
     std::string recv_buf = buffer->retrieveAllAsString();
 
@@ -77,7 +94,7 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net
     // 根据header_size读取数据头的原始字符流，反序列化数据，得到rpc请求的详细信息
     std::string rpc_header_str = recv_buf.substr(4, header_size);
     duan::RpcHeader rpcHeader;
-    
+
     std::string service_name;
     std::string method_name;
     uint32_t args_size;
@@ -108,7 +125,6 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net
     std::cout << "args_str: " << args_str << std::endl;
     std::cout << "============================================" << std::endl;
 
-
     // 获取service对象
     auto serviceInfoIt = serviceMap.find(service_name);
     if (serviceInfoIt == serviceMap.end())
@@ -130,7 +146,6 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net
     google::protobuf::Message *req = service->GetRequestPrototype(method).New();
     google::protobuf::Message *resp = service->GetResponsePrototype(method).New();
 
-
     /*
         template <typename Class, typename Arg1, typename Arg2>
         inline Closure* NewCallback(Class* object, void (Class::*method)(Arg1, Arg2),
@@ -141,19 +156,19 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net
     */
 
     // TODO: 我不明白为什么模板进行，自动类型推演的话，会编译错误，多出来一个&
-    auto callBack = google::protobuf::NewCallback
-                    <RpcProvider, const muduo::net::TcpConnectionPtr &, google::protobuf::Message*>
-                    (this, &RpcProvider::sendRpcResponse, conn, resp);
+    auto callBack = google::protobuf::NewCallback<RpcProvider, const muduo::net::TcpConnectionPtr &, google::protobuf::Message *>(this, &RpcProvider::sendRpcResponse, conn, resp);
 
     if (req->ParseFromString(args_str))
     {
-            /*
-                virtual void CallMethod(const MethodDescriptor* method,
-                                        RpcController* controller, const Message* request,
-                                        Message* response, Closure* done) = 0;
-            */
+        /*
+            virtual void CallMethod(const MethodDescriptor* method,
+                                    RpcController* controller, const Message* request,
+                                    Message* response, Closure* done) = 0;
+        */
         service->CallMethod(method, nullptr, req, resp, callBack);
     }
+
+    std::cout << "RpcProvider::onMessage" << std::endl;
 }
 
 // google::protobuf::Closure 回调函数 用于 down方法中，反序列化 与网络传输
@@ -163,12 +178,13 @@ void RpcProvider::sendRpcResponse(const muduo::net::TcpConnectionPtr &conn, goog
     if (resp->SerializeToString(&responseStr))
     {
         conn->send(responseStr);
-        
     }
     else
     {
-        std::cout<<" send Back failure " << std::endl;
+        std::cout << " send Back failure " << std::endl;
     }
     // 模拟http短链接 由rpcprovider主动断开链接
-    conn->shutdown(); 
+    conn->shutdown();
+
+    std::cout << "RpcProvider::sendRpcResponse" << std::endl;
 }

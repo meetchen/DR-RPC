@@ -67,7 +67,6 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     uint32_t port = atoi(config.getConfig("rpcserverport").c_str());
     std::string ip = config.getConfig("rpcserverip");
 
-    std::cout << ip << " : " << port << std::endl;
 
     // 设置服务器地址和端口
     struct sockaddr_in serverAddr;
@@ -84,11 +83,13 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
         close(clientSocket);
         exit(EXIT_FAILURE);
     }
+    
+    std::cout << headerStr << std::endl;
 
     // 发送数据
-    const char* message = headerStr.c_str(); 
-    int messageLen = strlen(message);
-    if (send(clientSocket, message, messageLen, 0) != messageLen) {
+    int messageLen = headerStr.size();
+    
+    if (send(clientSocket, headerStr.c_str(), headerStr.size(), 0) != messageLen) {
         std::cerr << "Error: Send failed" << std::endl;
     }
 
@@ -99,7 +100,6 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
         std::cerr << "Error: Receive failed" << std::endl;
     } else {
         buffer[bytesRead] = '\0';
-        std::cout << "Server response: " << buffer << std::endl;
     }
 
     // 关闭套接字
@@ -111,6 +111,8 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
         std::cout << "Parse From String Error " << std::endl;
         exit(EXIT_FAILURE);
     }
+
+    std::cout << "send over !!!" << std::endl;
 
 
 }

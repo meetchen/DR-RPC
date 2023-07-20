@@ -24,7 +24,9 @@ int main(int argc, char **argv)
         std::cout << "loginResponse error , msg : " << msg.msg() << std::endl;
     }
 
+    std::cout << "------------------" << std::endl;
     std::cout << loginResponse.success() << std::endl;
+    std::cout << "------------------" << std::endl;
  
 
     return 0;

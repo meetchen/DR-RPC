@@ -59,7 +59,7 @@ int main(int argc, char **argv)
     // 发布rpc
     RpcProvider pro;
     pro.NofityService(new UserService());
-
+    
     // 启动服务
     pro.Run();
 

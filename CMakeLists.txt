@@ -20,3 +20,5 @@ add_subdirectory(src)
 
 # example 包含drrpc框架使用的示例代码
 add_subdirectory(example)
+
+message("C++ Compiler: ${CMAKE_CXX_COMPILER}")

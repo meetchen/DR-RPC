@@ -32,9 +32,26 @@ class UserService : public::DUAN::UserServiceRpc
         }
 };
 
+void weclomeInfo()
+{
+    // std::cout << "Hello DR RPC" << std::endl;
+
+    // std::cout << "  /\\_/\\ " << std::endl;
+    // std::cout << " ( o.o )" << std::endl;
+    // std::cout << "  > ^ < " << std::endl;
+    std::cout << "" << std::endl;
+    std::cout << "     /\\_/\\   _____  _____    _____  _____    _____ " << std::endl;
+    std::cout << "    ( o.o ) |  __ \\|   __ \\  |  __ \\|  __ \\ / ____|" << std::endl;
+    std::cout << "     > ^ <  | |  | || |__) | | |__) | |__) | |     " << std::endl;
+    std::cout << "            | |  | ||  _  /  |  _  /|  ___/| |     " << std::endl;
+    std::cout << "            | |__| || | \\ \\  | | \\ \\| |    | |____ " << std::endl;
+    std::cout << "            |_____/ |_|  \\_\\ |_|  \\_\\_|     \\_____|" << std::endl;
+    std::cout << "                                                    " << std::endl;
+}
+
 int main(int argc, char **argv)
 {
-    std::cout << "Hello CMake" << std::endl;
+    weclomeInfo();
 
     //初始化框架
     DrRpcApplication::Init(argc, argv);

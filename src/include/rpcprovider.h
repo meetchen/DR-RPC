@@ -27,4 +27,7 @@ private:
 
     // 消息读写回调
     void onMessage(const muduo::net::TcpConnectionPtr &, muduo::net::Buffer *, muduo::Timestamp);
+
+    // google::protobuf::Closure 回调函数 用于 down方法中，反序列化 与网络传输
+    void backClosure(const muduo::net::TcpConnectionPtr &, google::protobuf::Message *resp);
 };

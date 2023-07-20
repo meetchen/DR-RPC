@@ -21,4 +21,8 @@ add_subdirectory(src)
 # example 包含drrpc框架使用的示例代码
 add_subdirectory(example)
 
+SET(CMAKE_BUILD_TYPE "Debug")
+
+set (CMAKE_CXX_COMPILER "/usr/bin/g++")
+
 message("C++ Compiler: ${CMAKE_CXX_COMPILER}")

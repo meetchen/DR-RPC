@@ -15,7 +15,7 @@ int main(int argc, char **argv)
     loginRequst.set_password("qifei");
 
     duan::LoginResponse loginResponse;
-
+    
     stub.Login(nullptr, &loginRequst, &loginResponse, nullptr);
 
     auto msg = loginResponse.msg();

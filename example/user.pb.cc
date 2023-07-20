@@ -15,7 +15,7 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 extern PROTOBUF_INTERNAL_EXPORT_user_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ResultMsg_user_2eproto;
-namespace DUAN {
+namespace duan {
 class ResultMsgDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ResultMsg> _instance;
@@ -28,16 +28,16 @@ class LoginResponseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LoginResponse> _instance;
 } _LoginResponse_default_instance_;
-}  // namespace DUAN
+}  // namespace duan
 static void InitDefaultsscc_info_LoginRequest_user_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::DUAN::_LoginRequest_default_instance_;
-    new (ptr) ::DUAN::LoginRequest();
+    void* ptr = &::duan::_LoginRequest_default_instance_;
+    new (ptr) ::duan::LoginRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::DUAN::LoginRequest::InitAsDefaultInstance();
+  ::duan::LoginRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LoginRequest_user_2eproto =
@@ -47,11 +47,11 @@ static void InitDefaultsscc_info_LoginResponse_user_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::DUAN::_LoginResponse_default_instance_;
-    new (ptr) ::DUAN::LoginResponse();
+    void* ptr = &::duan::_LoginResponse_default_instance_;
+    new (ptr) ::duan::LoginResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::DUAN::LoginResponse::InitAsDefaultInstance();
+  ::duan::LoginResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LoginResponse_user_2eproto =
@@ -62,11 +62,11 @@ static void InitDefaultsscc_info_ResultMsg_user_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::DUAN::_ResultMsg_default_instance_;
-    new (ptr) ::DUAN::ResultMsg();
+    void* ptr = &::duan::_ResultMsg_default_instance_;
+    new (ptr) ::duan::ResultMsg();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::DUAN::ResultMsg::InitAsDefaultInstance();
+  ::duan::ResultMsg::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ResultMsg_user_2eproto =
@@ -78,46 +78,46 @@ static const ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor* file_level_service_desc
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_user_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::DUAN::ResultMsg, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::duan::ResultMsg, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DUAN::ResultMsg, statecode_),
-  PROTOBUF_FIELD_OFFSET(::DUAN::ResultMsg, msg_),
+  PROTOBUF_FIELD_OFFSET(::duan::ResultMsg, statecode_),
+  PROTOBUF_FIELD_OFFSET(::duan::ResultMsg, msg_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::DUAN::LoginRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::duan::LoginRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DUAN::LoginRequest, name_),
-  PROTOBUF_FIELD_OFFSET(::DUAN::LoginRequest, password_),
+  PROTOBUF_FIELD_OFFSET(::duan::LoginRequest, name_),
+  PROTOBUF_FIELD_OFFSET(::duan::LoginRequest, password_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::DUAN::LoginResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::duan::LoginResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DUAN::LoginResponse, msg_),
-  PROTOBUF_FIELD_OFFSET(::DUAN::LoginResponse, success_),
+  PROTOBUF_FIELD_OFFSET(::duan::LoginResponse, msg_),
+  PROTOBUF_FIELD_OFFSET(::duan::LoginResponse, success_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::DUAN::ResultMsg)},
-  { 7, -1, sizeof(::DUAN::LoginRequest)},
-  { 14, -1, sizeof(::DUAN::LoginResponse)},
+  { 0, -1, sizeof(::duan::ResultMsg)},
+  { 7, -1, sizeof(::duan::LoginRequest)},
+  { 14, -1, sizeof(::duan::LoginResponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DUAN::_ResultMsg_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DUAN::_LoginRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DUAN::_LoginResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::duan::_ResultMsg_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::duan::_LoginRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::duan::_LoginResponse_default_instance_),
 };
 
 const char descriptor_table_protodef_user_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\nuser.proto\022\004DUAN\"+\n\tResultMsg\022\021\n\tstate"
+  "\n\nuser.proto\022\004duan\"+\n\tResultMsg\022\021\n\tstate"
   "Code\030\001 \001(\005\022\013\n\003msg\030\002 \001(\t\".\n\014LoginRequest\022"
   "\014\n\004name\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\">\n\rLogin"
-  "Response\022\034\n\003msg\030\001 \001(\0132\017.DUAN.ResultMsg\022\017"
+  "Response\022\034\n\003msg\030\001 \001(\0132\017.duan.ResultMsg\022\017"
   "\n\007success\030\002 \001(\0102B\n\016UserServiceRpc\0220\n\005Log"
-  "in\022\022.DUAN.LoginRequest\032\023.DUAN.LoginRespo"
+  "in\022\022.duan.LoginRequest\032\023.duan.LoginRespo"
   "nseB\003\200\001\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_user_2eproto_deps[1] = {
@@ -138,7 +138,7 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_user_2
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_user_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_user_2eproto), true);
-namespace DUAN {
+namespace duan {
 
 // ===================================================================
 
@@ -151,7 +151,7 @@ class ResultMsg::_Internal {
 ResultMsg::ResultMsg()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:DUAN.ResultMsg)
+  // @@protoc_insertion_point(constructor:duan.ResultMsg)
 }
 ResultMsg::ResultMsg(const ResultMsg& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -162,7 +162,7 @@ ResultMsg::ResultMsg(const ResultMsg& from)
     msg_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.msg_);
   }
   statecode_ = from.statecode_;
-  // @@protoc_insertion_point(copy_constructor:DUAN.ResultMsg)
+  // @@protoc_insertion_point(copy_constructor:duan.ResultMsg)
 }
 
 void ResultMsg::SharedCtor() {
@@ -172,7 +172,7 @@ void ResultMsg::SharedCtor() {
 }
 
 ResultMsg::~ResultMsg() {
-  // @@protoc_insertion_point(destructor:DUAN.ResultMsg)
+  // @@protoc_insertion_point(destructor:duan.ResultMsg)
   SharedDtor();
 }
 
@@ -190,7 +190,7 @@ const ResultMsg& ResultMsg::default_instance() {
 
 
 void ResultMsg::Clear() {
-// @@protoc_insertion_point(message_clear_start:DUAN.ResultMsg)
+// @@protoc_insertion_point(message_clear_start:duan.ResultMsg)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -219,7 +219,7 @@ const char* ResultMsg::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_msg();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "DUAN.ResultMsg.msg"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "duan.ResultMsg.msg"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -245,7 +245,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* ResultMsg::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:DUAN.ResultMsg)
+  // @@protoc_insertion_point(serialize_to_array_start:duan.ResultMsg)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -260,7 +260,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_msg().data(), static_cast<int>(this->_internal_msg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "DUAN.ResultMsg.msg");
+      "duan.ResultMsg.msg");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_msg(), target);
   }
@@ -269,12 +269,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:DUAN.ResultMsg)
+  // @@protoc_insertion_point(serialize_to_array_end:duan.ResultMsg)
   return target;
 }
 
 size_t ResultMsg::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:DUAN.ResultMsg)
+// @@protoc_insertion_point(message_byte_size_start:duan.ResultMsg)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -305,22 +305,22 @@ size_t ResultMsg::ByteSizeLong() const {
 }
 
 void ResultMsg::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DUAN.ResultMsg)
+// @@protoc_insertion_point(generalized_merge_from_start:duan.ResultMsg)
   GOOGLE_DCHECK_NE(&from, this);
   const ResultMsg* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ResultMsg>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DUAN.ResultMsg)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:duan.ResultMsg)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DUAN.ResultMsg)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:duan.ResultMsg)
     MergeFrom(*source);
   }
 }
 
 void ResultMsg::MergeFrom(const ResultMsg& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DUAN.ResultMsg)
+// @@protoc_insertion_point(class_specific_merge_from_start:duan.ResultMsg)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -336,14 +336,14 @@ void ResultMsg::MergeFrom(const ResultMsg& from) {
 }
 
 void ResultMsg::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DUAN.ResultMsg)
+// @@protoc_insertion_point(generalized_copy_from_start:duan.ResultMsg)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ResultMsg::CopyFrom(const ResultMsg& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:DUAN.ResultMsg)
+// @@protoc_insertion_point(class_specific_copy_from_start:duan.ResultMsg)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -377,7 +377,7 @@ class LoginRequest::_Internal {
 LoginRequest::LoginRequest()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:DUAN.LoginRequest)
+  // @@protoc_insertion_point(constructor:duan.LoginRequest)
 }
 LoginRequest::LoginRequest(const LoginRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -391,7 +391,7 @@ LoginRequest::LoginRequest(const LoginRequest& from)
   if (!from._internal_password().empty()) {
     password_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.password_);
   }
-  // @@protoc_insertion_point(copy_constructor:DUAN.LoginRequest)
+  // @@protoc_insertion_point(copy_constructor:duan.LoginRequest)
 }
 
 void LoginRequest::SharedCtor() {
@@ -401,7 +401,7 @@ void LoginRequest::SharedCtor() {
 }
 
 LoginRequest::~LoginRequest() {
-  // @@protoc_insertion_point(destructor:DUAN.LoginRequest)
+  // @@protoc_insertion_point(destructor:duan.LoginRequest)
   SharedDtor();
 }
 
@@ -420,7 +420,7 @@ const LoginRequest& LoginRequest::default_instance() {
 
 
 void LoginRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:DUAN.LoginRequest)
+// @@protoc_insertion_point(message_clear_start:duan.LoginRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -442,7 +442,7 @@ const char* LoginRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_name();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "DUAN.LoginRequest.name"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "duan.LoginRequest.name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -451,7 +451,7 @@ const char* LoginRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_password();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "DUAN.LoginRequest.password"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "duan.LoginRequest.password"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -477,7 +477,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* LoginRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:DUAN.LoginRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:duan.LoginRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -486,7 +486,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "DUAN.LoginRequest.name");
+      "duan.LoginRequest.name");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_name(), target);
   }
@@ -496,7 +496,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_password().data(), static_cast<int>(this->_internal_password().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "DUAN.LoginRequest.password");
+      "duan.LoginRequest.password");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_password(), target);
   }
@@ -505,12 +505,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:DUAN.LoginRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:duan.LoginRequest)
   return target;
 }
 
 size_t LoginRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:DUAN.LoginRequest)
+// @@protoc_insertion_point(message_byte_size_start:duan.LoginRequest)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -541,22 +541,22 @@ size_t LoginRequest::ByteSizeLong() const {
 }
 
 void LoginRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DUAN.LoginRequest)
+// @@protoc_insertion_point(generalized_merge_from_start:duan.LoginRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const LoginRequest* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoginRequest>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DUAN.LoginRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:duan.LoginRequest)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DUAN.LoginRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:duan.LoginRequest)
     MergeFrom(*source);
   }
 }
 
 void LoginRequest::MergeFrom(const LoginRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DUAN.LoginRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:duan.LoginRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -573,14 +573,14 @@ void LoginRequest::MergeFrom(const LoginRequest& from) {
 }
 
 void LoginRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DUAN.LoginRequest)
+// @@protoc_insertion_point(generalized_copy_from_start:duan.LoginRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void LoginRequest::CopyFrom(const LoginRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:DUAN.LoginRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:duan.LoginRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -607,34 +607,34 @@ void LoginRequest::InternalSwap(LoginRequest* other) {
 // ===================================================================
 
 void LoginResponse::InitAsDefaultInstance() {
-  ::DUAN::_LoginResponse_default_instance_._instance.get_mutable()->msg_ = const_cast< ::DUAN::ResultMsg*>(
-      ::DUAN::ResultMsg::internal_default_instance());
+  ::duan::_LoginResponse_default_instance_._instance.get_mutable()->msg_ = const_cast< ::duan::ResultMsg*>(
+      ::duan::ResultMsg::internal_default_instance());
 }
 class LoginResponse::_Internal {
  public:
-  static const ::DUAN::ResultMsg& msg(const LoginResponse* msg);
+  static const ::duan::ResultMsg& msg(const LoginResponse* msg);
 };
 
-const ::DUAN::ResultMsg&
+const ::duan::ResultMsg&
 LoginResponse::_Internal::msg(const LoginResponse* msg) {
   return *msg->msg_;
 }
 LoginResponse::LoginResponse()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:DUAN.LoginResponse)
+  // @@protoc_insertion_point(constructor:duan.LoginResponse)
 }
 LoginResponse::LoginResponse(const LoginResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from._internal_has_msg()) {
-    msg_ = new ::DUAN::ResultMsg(*from.msg_);
+    msg_ = new ::duan::ResultMsg(*from.msg_);
   } else {
     msg_ = nullptr;
   }
   success_ = from.success_;
-  // @@protoc_insertion_point(copy_constructor:DUAN.LoginResponse)
+  // @@protoc_insertion_point(copy_constructor:duan.LoginResponse)
 }
 
 void LoginResponse::SharedCtor() {
@@ -645,7 +645,7 @@ void LoginResponse::SharedCtor() {
 }
 
 LoginResponse::~LoginResponse() {
-  // @@protoc_insertion_point(destructor:DUAN.LoginResponse)
+  // @@protoc_insertion_point(destructor:duan.LoginResponse)
   SharedDtor();
 }
 
@@ -663,7 +663,7 @@ const LoginResponse& LoginResponse::default_instance() {
 
 
 void LoginResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:DUAN.LoginResponse)
+// @@protoc_insertion_point(message_clear_start:duan.LoginResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -683,7 +683,7 @@ const char* LoginResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .DUAN.ResultMsg msg = 1;
+      // .duan.ResultMsg msg = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_msg(), ptr);
@@ -719,11 +719,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* LoginResponse::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:DUAN.LoginResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:duan.LoginResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .DUAN.ResultMsg msg = 1;
+  // .duan.ResultMsg msg = 1;
   if (this->has_msg()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -741,19 +741,19 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:DUAN.LoginResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:duan.LoginResponse)
   return target;
 }
 
 size_t LoginResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:DUAN.LoginResponse)
+// @@protoc_insertion_point(message_byte_size_start:duan.LoginResponse)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .DUAN.ResultMsg msg = 1;
+  // .duan.ResultMsg msg = 1;
   if (this->has_msg()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -775,29 +775,29 @@ size_t LoginResponse::ByteSizeLong() const {
 }
 
 void LoginResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DUAN.LoginResponse)
+// @@protoc_insertion_point(generalized_merge_from_start:duan.LoginResponse)
   GOOGLE_DCHECK_NE(&from, this);
   const LoginResponse* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoginResponse>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DUAN.LoginResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:duan.LoginResponse)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DUAN.LoginResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:duan.LoginResponse)
     MergeFrom(*source);
   }
 }
 
 void LoginResponse::MergeFrom(const LoginResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DUAN.LoginResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:duan.LoginResponse)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_msg()) {
-    _internal_mutable_msg()->::DUAN::ResultMsg::MergeFrom(from._internal_msg());
+    _internal_mutable_msg()->::duan::ResultMsg::MergeFrom(from._internal_msg());
   }
   if (from.success() != 0) {
     _internal_set_success(from._internal_success());
@@ -805,14 +805,14 @@ void LoginResponse::MergeFrom(const LoginResponse& from) {
 }
 
 void LoginResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DUAN.LoginResponse)
+// @@protoc_insertion_point(generalized_copy_from_start:duan.LoginResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void LoginResponse::CopyFrom(const LoginResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:DUAN.LoginResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:duan.LoginResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -848,8 +848,8 @@ const ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor* UserServiceRpc::GetDescriptor(
 }
 
 void UserServiceRpc::Login(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                         const ::DUAN::LoginRequest*,
-                         ::DUAN::LoginResponse*,
+                         const ::duan::LoginRequest*,
+                         ::duan::LoginResponse*,
                          ::google::protobuf::Closure* done) {
   controller->SetFailed("Method Login() not implemented.");
   done->Run();
@@ -864,9 +864,9 @@ void UserServiceRpc::CallMethod(const ::PROTOBUF_NAMESPACE_ID::MethodDescriptor*
   switch(method->index()) {
     case 0:
       Login(controller,
-             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::DUAN::LoginRequest*>(
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::duan::LoginRequest*>(
                  request),
-             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::DUAN::LoginResponse*>(
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::duan::LoginResponse*>(
                  response),
              done);
       break;
@@ -881,7 +881,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message& UserServiceRpc::GetRequestPrototype(
   GOOGLE_DCHECK_EQ(method->service(), descriptor());
   switch(method->index()) {
     case 0:
-      return ::DUAN::LoginRequest::default_instance();
+      return ::duan::LoginRequest::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       return *::PROTOBUF_NAMESPACE_ID::MessageFactory::generated_factory()
@@ -894,7 +894,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message& UserServiceRpc::GetResponsePrototype(
   GOOGLE_DCHECK_EQ(method->service(), descriptor());
   switch(method->index()) {
     case 0:
-      return ::DUAN::LoginResponse::default_instance();
+      return ::duan::LoginResponse::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       return *::PROTOBUF_NAMESPACE_ID::MessageFactory::generated_factory()
@@ -914,24 +914,24 @@ UserServiceRpc_Stub::~UserServiceRpc_Stub() {
 }
 
 void UserServiceRpc_Stub::Login(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                              const ::DUAN::LoginRequest* request,
-                              ::DUAN::LoginResponse* response,
+                              const ::duan::LoginRequest* request,
+                              ::duan::LoginResponse* response,
                               ::google::protobuf::Closure* done) {
   channel_->CallMethod(descriptor()->method(0),
                        controller, request, response, done);
 }
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace DUAN
+}  // namespace duan
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::DUAN::ResultMsg* Arena::CreateMaybeMessage< ::DUAN::ResultMsg >(Arena* arena) {
-  return Arena::CreateInternal< ::DUAN::ResultMsg >(arena);
+template<> PROTOBUF_NOINLINE ::duan::ResultMsg* Arena::CreateMaybeMessage< ::duan::ResultMsg >(Arena* arena) {
+  return Arena::CreateInternal< ::duan::ResultMsg >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DUAN::LoginRequest* Arena::CreateMaybeMessage< ::DUAN::LoginRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::DUAN::LoginRequest >(arena);
+template<> PROTOBUF_NOINLINE ::duan::LoginRequest* Arena::CreateMaybeMessage< ::duan::LoginRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::duan::LoginRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DUAN::LoginResponse* Arena::CreateMaybeMessage< ::DUAN::LoginResponse >(Arena* arena) {
-  return Arena::CreateInternal< ::DUAN::LoginResponse >(arena);
+template<> PROTOBUF_NOINLINE ::duan::LoginResponse* Arena::CreateMaybeMessage< ::duan::LoginResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::duan::LoginResponse >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

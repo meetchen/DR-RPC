@@ -4,7 +4,7 @@
 #include"drrpcapplication.h"
 #include"rpcprovider.h"
 
-class UserService : public::DUAN::UserServiceRpc
+class UserService : public::duan::UserServiceRpc
 {
     public:
         bool Login(std::string name, std::string password)
@@ -14,8 +14,8 @@ class UserService : public::DUAN::UserServiceRpc
         }
         
         void Login(::google::protobuf::RpcController* controller,
-                    const ::DUAN::LoginRequest* request,
-                    ::DUAN::LoginResponse* response,
+                    const ::duan::LoginRequest* request,
+                    ::duan::LoginResponse* response,
                     ::google::protobuf::Closure* done)
         {
             std::string name = request->name();
@@ -23,7 +23,7 @@ class UserService : public::DUAN::UserServiceRpc
 
             bool success = Login(name, password);
 
-            DUAN::ResultMsg *msg = response->mutable_msg();
+            duan::ResultMsg *msg = response->mutable_msg();
             msg->set_statecode(200);
             msg->set_msg("good");
             response->set_success(success);

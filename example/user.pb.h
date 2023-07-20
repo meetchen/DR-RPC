@@ -55,7 +55,7 @@ struct TableStruct_user_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_user_2eproto;
-namespace DUAN {
+namespace duan {
 class LoginRequest;
 class LoginRequestDefaultTypeInternal;
 extern LoginRequestDefaultTypeInternal _LoginRequest_default_instance_;
@@ -65,18 +65,18 @@ extern LoginResponseDefaultTypeInternal _LoginResponse_default_instance_;
 class ResultMsg;
 class ResultMsgDefaultTypeInternal;
 extern ResultMsgDefaultTypeInternal _ResultMsg_default_instance_;
-}  // namespace DUAN
+}  // namespace duan
 PROTOBUF_NAMESPACE_OPEN
-template<> ::DUAN::LoginRequest* Arena::CreateMaybeMessage<::DUAN::LoginRequest>(Arena*);
-template<> ::DUAN::LoginResponse* Arena::CreateMaybeMessage<::DUAN::LoginResponse>(Arena*);
-template<> ::DUAN::ResultMsg* Arena::CreateMaybeMessage<::DUAN::ResultMsg>(Arena*);
+template<> ::duan::LoginRequest* Arena::CreateMaybeMessage<::duan::LoginRequest>(Arena*);
+template<> ::duan::LoginResponse* Arena::CreateMaybeMessage<::duan::LoginResponse>(Arena*);
+template<> ::duan::ResultMsg* Arena::CreateMaybeMessage<::duan::ResultMsg>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace DUAN {
+namespace duan {
 
 // ===================================================================
 
 class ResultMsg :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:DUAN.ResultMsg) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:duan.ResultMsg) */ {
  public:
   ResultMsg();
   virtual ~ResultMsg();
@@ -156,7 +156,7 @@ class ResultMsg :
   void InternalSwap(ResultMsg* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "DUAN.ResultMsg";
+    return "duan.ResultMsg";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -209,7 +209,7 @@ class ResultMsg :
   void _internal_set_statecode(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:DUAN.ResultMsg)
+  // @@protoc_insertion_point(class_scope:duan.ResultMsg)
  private:
   class _Internal;
 
@@ -222,7 +222,7 @@ class ResultMsg :
 // -------------------------------------------------------------------
 
 class LoginRequest :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:DUAN.LoginRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:duan.LoginRequest) */ {
  public:
   LoginRequest();
   virtual ~LoginRequest();
@@ -302,7 +302,7 @@ class LoginRequest :
   void InternalSwap(LoginRequest* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "DUAN.LoginRequest";
+    return "duan.LoginRequest";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -362,7 +362,7 @@ class LoginRequest :
   std::string* _internal_mutable_password();
   public:
 
-  // @@protoc_insertion_point(class_scope:DUAN.LoginRequest)
+  // @@protoc_insertion_point(class_scope:duan.LoginRequest)
  private:
   class _Internal;
 
@@ -375,7 +375,7 @@ class LoginRequest :
 // -------------------------------------------------------------------
 
 class LoginResponse :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:DUAN.LoginResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:duan.LoginResponse) */ {
  public:
   LoginResponse();
   virtual ~LoginResponse();
@@ -455,7 +455,7 @@ class LoginResponse :
   void InternalSwap(LoginResponse* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "DUAN.LoginResponse";
+    return "duan.LoginResponse";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -483,19 +483,19 @@ class LoginResponse :
     kMsgFieldNumber = 1,
     kSuccessFieldNumber = 2,
   };
-  // .DUAN.ResultMsg msg = 1;
+  // .duan.ResultMsg msg = 1;
   bool has_msg() const;
   private:
   bool _internal_has_msg() const;
   public:
   void clear_msg();
-  const ::DUAN::ResultMsg& msg() const;
-  ::DUAN::ResultMsg* release_msg();
-  ::DUAN::ResultMsg* mutable_msg();
-  void set_allocated_msg(::DUAN::ResultMsg* msg);
+  const ::duan::ResultMsg& msg() const;
+  ::duan::ResultMsg* release_msg();
+  ::duan::ResultMsg* mutable_msg();
+  void set_allocated_msg(::duan::ResultMsg* msg);
   private:
-  const ::DUAN::ResultMsg& _internal_msg() const;
-  ::DUAN::ResultMsg* _internal_mutable_msg();
+  const ::duan::ResultMsg& _internal_msg() const;
+  ::duan::ResultMsg* _internal_mutable_msg();
   public:
 
   // bool success = 2;
@@ -507,12 +507,12 @@ class LoginResponse :
   void _internal_set_success(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:DUAN.LoginResponse)
+  // @@protoc_insertion_point(class_scope:duan.LoginResponse)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::DUAN::ResultMsg* msg_;
+  ::duan::ResultMsg* msg_;
   bool success_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_user_2eproto;
@@ -533,8 +533,8 @@ class UserServiceRpc : public ::PROTOBUF_NAMESPACE_ID::Service {
   static const ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor* descriptor();
 
   virtual void Login(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                       const ::DUAN::LoginRequest* request,
-                       ::DUAN::LoginResponse* response,
+                       const ::duan::LoginRequest* request,
+                       ::duan::LoginResponse* response,
                        ::google::protobuf::Closure* done);
 
   // implements Service ----------------------------------------------
@@ -566,8 +566,8 @@ class UserServiceRpc_Stub : public UserServiceRpc {
   // implements UserServiceRpc ------------------------------------------
 
   void Login(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                       const ::DUAN::LoginRequest* request,
-                       ::DUAN::LoginResponse* response,
+                       const ::duan::LoginRequest* request,
+                       ::duan::LoginResponse* response,
                        ::google::protobuf::Closure* done);
  private:
   ::PROTOBUF_NAMESPACE_ID::RpcChannel* channel_;
@@ -595,7 +595,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ResultMsg::_internal_statecode() const {
   return statecode_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ResultMsg::statecode() const {
-  // @@protoc_insertion_point(field_get:DUAN.ResultMsg.stateCode)
+  // @@protoc_insertion_point(field_get:duan.ResultMsg.stateCode)
   return _internal_statecode();
 }
 inline void ResultMsg::_internal_set_statecode(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -604,7 +604,7 @@ inline void ResultMsg::_internal_set_statecode(::PROTOBUF_NAMESPACE_ID::int32 va
 }
 inline void ResultMsg::set_statecode(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_statecode(value);
-  // @@protoc_insertion_point(field_set:DUAN.ResultMsg.stateCode)
+  // @@protoc_insertion_point(field_set:duan.ResultMsg.stateCode)
 }
 
 // string msg = 2;
@@ -612,15 +612,15 @@ inline void ResultMsg::clear_msg() {
   msg_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& ResultMsg::msg() const {
-  // @@protoc_insertion_point(field_get:DUAN.ResultMsg.msg)
+  // @@protoc_insertion_point(field_get:duan.ResultMsg.msg)
   return _internal_msg();
 }
 inline void ResultMsg::set_msg(const std::string& value) {
   _internal_set_msg(value);
-  // @@protoc_insertion_point(field_set:DUAN.ResultMsg.msg)
+  // @@protoc_insertion_point(field_set:duan.ResultMsg.msg)
 }
 inline std::string* ResultMsg::mutable_msg() {
-  // @@protoc_insertion_point(field_mutable:DUAN.ResultMsg.msg)
+  // @@protoc_insertion_point(field_mutable:duan.ResultMsg.msg)
   return _internal_mutable_msg();
 }
 inline const std::string& ResultMsg::_internal_msg() const {
@@ -634,26 +634,26 @@ inline void ResultMsg::set_msg(std::string&& value) {
   
   msg_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:DUAN.ResultMsg.msg)
+  // @@protoc_insertion_point(field_set_rvalue:duan.ResultMsg.msg)
 }
 inline void ResultMsg::set_msg(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   msg_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:DUAN.ResultMsg.msg)
+  // @@protoc_insertion_point(field_set_char:duan.ResultMsg.msg)
 }
 inline void ResultMsg::set_msg(const char* value, size_t size) {
   
   msg_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:DUAN.ResultMsg.msg)
+  // @@protoc_insertion_point(field_set_pointer:duan.ResultMsg.msg)
 }
 inline std::string* ResultMsg::_internal_mutable_msg() {
   
   return msg_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* ResultMsg::release_msg() {
-  // @@protoc_insertion_point(field_release:DUAN.ResultMsg.msg)
+  // @@protoc_insertion_point(field_release:duan.ResultMsg.msg)
   
   return msg_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -664,7 +664,7 @@ inline void ResultMsg::set_allocated_msg(std::string* msg) {
     
   }
   msg_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), msg);
-  // @@protoc_insertion_point(field_set_allocated:DUAN.ResultMsg.msg)
+  // @@protoc_insertion_point(field_set_allocated:duan.ResultMsg.msg)
 }
 
 // -------------------------------------------------------------------
@@ -676,15 +676,15 @@ inline void LoginRequest::clear_name() {
   name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& LoginRequest::name() const {
-  // @@protoc_insertion_point(field_get:DUAN.LoginRequest.name)
+  // @@protoc_insertion_point(field_get:duan.LoginRequest.name)
   return _internal_name();
 }
 inline void LoginRequest::set_name(const std::string& value) {
   _internal_set_name(value);
-  // @@protoc_insertion_point(field_set:DUAN.LoginRequest.name)
+  // @@protoc_insertion_point(field_set:duan.LoginRequest.name)
 }
 inline std::string* LoginRequest::mutable_name() {
-  // @@protoc_insertion_point(field_mutable:DUAN.LoginRequest.name)
+  // @@protoc_insertion_point(field_mutable:duan.LoginRequest.name)
   return _internal_mutable_name();
 }
 inline const std::string& LoginRequest::_internal_name() const {
@@ -698,26 +698,26 @@ inline void LoginRequest::set_name(std::string&& value) {
   
   name_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:DUAN.LoginRequest.name)
+  // @@protoc_insertion_point(field_set_rvalue:duan.LoginRequest.name)
 }
 inline void LoginRequest::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:DUAN.LoginRequest.name)
+  // @@protoc_insertion_point(field_set_char:duan.LoginRequest.name)
 }
 inline void LoginRequest::set_name(const char* value, size_t size) {
   
   name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:DUAN.LoginRequest.name)
+  // @@protoc_insertion_point(field_set_pointer:duan.LoginRequest.name)
 }
 inline std::string* LoginRequest::_internal_mutable_name() {
   
   return name_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* LoginRequest::release_name() {
-  // @@protoc_insertion_point(field_release:DUAN.LoginRequest.name)
+  // @@protoc_insertion_point(field_release:duan.LoginRequest.name)
   
   return name_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -728,7 +728,7 @@ inline void LoginRequest::set_allocated_name(std::string* name) {
     
   }
   name_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name);
-  // @@protoc_insertion_point(field_set_allocated:DUAN.LoginRequest.name)
+  // @@protoc_insertion_point(field_set_allocated:duan.LoginRequest.name)
 }
 
 // string password = 2;
@@ -736,15 +736,15 @@ inline void LoginRequest::clear_password() {
   password_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& LoginRequest::password() const {
-  // @@protoc_insertion_point(field_get:DUAN.LoginRequest.password)
+  // @@protoc_insertion_point(field_get:duan.LoginRequest.password)
   return _internal_password();
 }
 inline void LoginRequest::set_password(const std::string& value) {
   _internal_set_password(value);
-  // @@protoc_insertion_point(field_set:DUAN.LoginRequest.password)
+  // @@protoc_insertion_point(field_set:duan.LoginRequest.password)
 }
 inline std::string* LoginRequest::mutable_password() {
-  // @@protoc_insertion_point(field_mutable:DUAN.LoginRequest.password)
+  // @@protoc_insertion_point(field_mutable:duan.LoginRequest.password)
   return _internal_mutable_password();
 }
 inline const std::string& LoginRequest::_internal_password() const {
@@ -758,26 +758,26 @@ inline void LoginRequest::set_password(std::string&& value) {
   
   password_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:DUAN.LoginRequest.password)
+  // @@protoc_insertion_point(field_set_rvalue:duan.LoginRequest.password)
 }
 inline void LoginRequest::set_password(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   password_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:DUAN.LoginRequest.password)
+  // @@protoc_insertion_point(field_set_char:duan.LoginRequest.password)
 }
 inline void LoginRequest::set_password(const char* value, size_t size) {
   
   password_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:DUAN.LoginRequest.password)
+  // @@protoc_insertion_point(field_set_pointer:duan.LoginRequest.password)
 }
 inline std::string* LoginRequest::_internal_mutable_password() {
   
   return password_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* LoginRequest::release_password() {
-  // @@protoc_insertion_point(field_release:DUAN.LoginRequest.password)
+  // @@protoc_insertion_point(field_release:duan.LoginRequest.password)
   
   return password_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -788,14 +788,14 @@ inline void LoginRequest::set_allocated_password(std::string* password) {
     
   }
   password_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), password);
-  // @@protoc_insertion_point(field_set_allocated:DUAN.LoginRequest.password)
+  // @@protoc_insertion_point(field_set_allocated:duan.LoginRequest.password)
 }
 
 // -------------------------------------------------------------------
 
 // LoginResponse
 
-// .DUAN.ResultMsg msg = 1;
+// .duan.ResultMsg msg = 1;
 inline bool LoginResponse::_internal_has_msg() const {
   return this != internal_default_instance() && msg_ != nullptr;
 }
@@ -808,35 +808,35 @@ inline void LoginResponse::clear_msg() {
   }
   msg_ = nullptr;
 }
-inline const ::DUAN::ResultMsg& LoginResponse::_internal_msg() const {
-  const ::DUAN::ResultMsg* p = msg_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::DUAN::ResultMsg*>(
-      &::DUAN::_ResultMsg_default_instance_);
+inline const ::duan::ResultMsg& LoginResponse::_internal_msg() const {
+  const ::duan::ResultMsg* p = msg_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::duan::ResultMsg*>(
+      &::duan::_ResultMsg_default_instance_);
 }
-inline const ::DUAN::ResultMsg& LoginResponse::msg() const {
-  // @@protoc_insertion_point(field_get:DUAN.LoginResponse.msg)
+inline const ::duan::ResultMsg& LoginResponse::msg() const {
+  // @@protoc_insertion_point(field_get:duan.LoginResponse.msg)
   return _internal_msg();
 }
-inline ::DUAN::ResultMsg* LoginResponse::release_msg() {
-  // @@protoc_insertion_point(field_release:DUAN.LoginResponse.msg)
+inline ::duan::ResultMsg* LoginResponse::release_msg() {
+  // @@protoc_insertion_point(field_release:duan.LoginResponse.msg)
   
-  ::DUAN::ResultMsg* temp = msg_;
+  ::duan::ResultMsg* temp = msg_;
   msg_ = nullptr;
   return temp;
 }
-inline ::DUAN::ResultMsg* LoginResponse::_internal_mutable_msg() {
+inline ::duan::ResultMsg* LoginResponse::_internal_mutable_msg() {
   
   if (msg_ == nullptr) {
-    auto* p = CreateMaybeMessage<::DUAN::ResultMsg>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::duan::ResultMsg>(GetArenaNoVirtual());
     msg_ = p;
   }
   return msg_;
 }
-inline ::DUAN::ResultMsg* LoginResponse::mutable_msg() {
-  // @@protoc_insertion_point(field_mutable:DUAN.LoginResponse.msg)
+inline ::duan::ResultMsg* LoginResponse::mutable_msg() {
+  // @@protoc_insertion_point(field_mutable:duan.LoginResponse.msg)
   return _internal_mutable_msg();
 }
-inline void LoginResponse::set_allocated_msg(::DUAN::ResultMsg* msg) {
+inline void LoginResponse::set_allocated_msg(::duan::ResultMsg* msg) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete msg_;
@@ -852,7 +852,7 @@ inline void LoginResponse::set_allocated_msg(::DUAN::ResultMsg* msg) {
     
   }
   msg_ = msg;
-  // @@protoc_insertion_point(field_set_allocated:DUAN.LoginResponse.msg)
+  // @@protoc_insertion_point(field_set_allocated:duan.LoginResponse.msg)
 }
 
 // bool success = 2;
@@ -863,7 +863,7 @@ inline bool LoginResponse::_internal_success() const {
   return success_;
 }
 inline bool LoginResponse::success() const {
-  // @@protoc_insertion_point(field_get:DUAN.LoginResponse.success)
+  // @@protoc_insertion_point(field_get:duan.LoginResponse.success)
   return _internal_success();
 }
 inline void LoginResponse::_internal_set_success(bool value) {
@@ -872,7 +872,7 @@ inline void LoginResponse::_internal_set_success(bool value) {
 }
 inline void LoginResponse::set_success(bool value) {
   _internal_set_success(value);
-  // @@protoc_insertion_point(field_set:DUAN.LoginResponse.success)
+  // @@protoc_insertion_point(field_set:duan.LoginResponse.success)
 }
 
 #ifdef __GNUC__
@@ -885,7 +885,7 @@ inline void LoginResponse::set_success(bool value) {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace DUAN
+}  // namespace duan
 
 // @@protoc_insertion_point(global_scope)
 

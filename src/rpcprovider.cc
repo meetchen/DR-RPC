@@ -107,11 +107,6 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net
     std::cout << "args_str: " << args_str << std::endl;
     std::cout << "============================================" << std::endl;
 
-    /*
-        virtual void CallMethod(const MethodDescriptor* method,
-                                RpcController* controller, const Message* request,
-                                Message* response, Closure* done) = 0;
-    */
 
     // 获取service对象
     auto serviceInfoIt = serviceMap.find(service_name);
@@ -135,9 +130,7 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net
     google::protobuf::Message *resp = service->GetResponsePrototype(method).New();
 
 
-
     /*
-
         template <typename Class, typename Arg1, typename Arg2>
         inline Closure* NewCallback(Class* object, void (Class::*method)(Arg1, Arg2),
                                     Arg1 arg1, Arg2 arg2) {
@@ -145,17 +138,36 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net
             object, method, true, arg1, arg2);
         }
     */
+
+    // TODO: 我不明白为什么模板进行，自动类型推演的话，会编译错误，多出来一个&
     auto callBack = google::protobuf::NewCallback
                     <RpcProvider, const muduo::net::TcpConnectionPtr &, google::protobuf::Message*>
-                    (this, &RpcProvider::backClosure, conn, resp);
+                    (this, &RpcProvider::sendRpcResponse, conn, resp);
 
     if (req->ParseFromString(args_str))
     {
+            /*
+                virtual void CallMethod(const MethodDescriptor* method,
+                                        RpcController* controller, const Message* request,
+                                        Message* response, Closure* done) = 0;
+            */
         service->CallMethod(method, nullptr, req, resp, callBack);
     }
 }
 
 // google::protobuf::Closure 回调函数 用于 down方法中，反序列化 与网络传输
-void RpcProvider::backClosure(const muduo::net::TcpConnectionPtr &conn, google::protobuf::Message *resp)
+void RpcProvider::sendRpcResponse(const muduo::net::TcpConnectionPtr &conn, google::protobuf::Message *resp)
 {
+    std::string responseStr;
+    if (resp->SerializeToString(&responseStr))
+    {
+        conn->send(responseStr);
+        
+    }
+    else
+    {
+        std::cout<<" send Back failure " << std::endl;
+    }
+    // 模拟http短链接 由rpcprovider主动断开链接
+    conn->shutdown(); 
 }

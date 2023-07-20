@@ -15,6 +15,7 @@ void showArgsHelp()
     std::cout << "format : command -c <config file> " << std::endl;
 }
 
+// 加载服务的配置文件 ip地址 端口号 等等
 void DrRpcApplication::Init(int argc, char **argv)
 {
     if (argc < 2)

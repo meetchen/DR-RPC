@@ -30,7 +30,6 @@ void RpcProvider::NofityService(google::protobuf::Service *service)
     }
     service_info.service = service;
     serviceMap.emplace(service_name, service_info);
-    std::cout << "NofityService Finish" << std::endl;
 }
 
 void RpcProvider::Run()
@@ -72,7 +71,7 @@ void RpcProvider::onConneciton(const muduo::net::TcpConnectionPtr &conn)
 }
 
 // 消息读写回调
-void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net::Buffer *buffer, muduo::Timestamp)
+void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net::Buffer *buffer, muduo::Timestamp tsp)
 {
 
     if (buffer == nullptr)

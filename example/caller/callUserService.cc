@@ -12,20 +12,19 @@ int main(int argc, char **argv)
     // 封装传入的参数
     duan::LoginRequest loginRequst;
     loginRequst.set_name("duanran");
-    loginRequst.set_password("qifei");
+    loginRequst.set_password("password");
 
     duan::LoginResponse loginResponse;
     
     stub.Login(nullptr, &loginRequst, &loginResponse, nullptr);
 
     auto msg = loginResponse.msg();
-    if (msg.statecode() == 0)
-    {
-        std::cout << "loginResponse error , msg : " << msg.msg() << std::endl;
-    }
 
     std::cout << "------------------" << std::endl;
-    std::cout << loginResponse.success() << std::endl;
+    if (msg.statecode() == 0)
+    {
+        std::cout << "Login Response error, msg : " << msg.msg() << std::endl;
+    }
     std::cout << "------------------" << std::endl;
  
 

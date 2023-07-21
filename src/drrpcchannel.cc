@@ -84,7 +84,6 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
         exit(EXIT_FAILURE);
     }
     
-    std::cout << headerStr << std::endl;
 
     // 发送数据
     int messageLen = headerStr.size();
@@ -112,7 +111,7 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
         exit(EXIT_FAILURE);
     }
 
-    std::cout << "send over !!!" << std::endl;
+    std::cout << "Send over !" << std::endl;
 
 
 }

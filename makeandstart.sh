@@ -6,6 +6,8 @@
 cd build
 
 # 执行命令：make
+make clean
+
 make
 
 # 执行命令：cd ..

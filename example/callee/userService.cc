@@ -82,6 +82,7 @@ int main(int argc, char **argv)
     weclomeInfo();
 
     LOG_INFO("ddddd");
+    LOG_ERR("GGGGG");
 
     //初始化框架
     DrRpcApplication::Init(argc, argv);

@@ -36,11 +36,11 @@ DrRpcLogger::DrRpcLogger()
             std::string msg = queue.pop();
 
             char timeBuf[128] = {0};
-            sprintf(timeBuf, "%d:%d:%d : [%s]"
+            sprintf(timeBuf, "%d:%d:%d : [%s] "
                             , tmstruct -> tm_hour, 
                             tmstruct -> tm_min, 
                             tmstruct -> tm_sec,
-                            (this -> level == INFO ? "INFO : " : "ERROR : ")
+                            (this -> level == INFO ? "INFO" : "ERROR")
                         ); 
             msg.insert(0, timeBuf);
             msg.append("\n");

@@ -33,7 +33,7 @@ void DrRpcController::StartCancel(){
 
 };
 bool DrRpcController::IsCanceled() const {
-
+    return true;
 };
 void DrRpcController::NotifyOnCancel(google::protobuf::Closure *callback){
 

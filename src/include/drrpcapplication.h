@@ -2,6 +2,7 @@
 #include "drrpcconfig.h"
 #include "drrpcchannel.h"
 #include "drrpccontroller.h"
+#include "drrpclogger.h"
 
 
 class DrRpcApplication

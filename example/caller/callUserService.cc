@@ -20,12 +20,11 @@ int main(int argc, char **argv)
 
     auto msg = loginResponse.msg();
 
-    std::cout << "------------------" << std::endl;
-    if (msg.statecode() == 0)
-    {
-        std::cout << "Login Response error, msg : " << msg.msg() << std::endl;
-    }
-    std::cout << "------------------" << std::endl;
+    std::cout << "-----callUserService------" << std::endl;
+    std::cout << "stateCode :" << msg.statecode() << std::endl;
+    std::cout << "mgs :" << msg.msg() << std::endl;
+    std::cout << "success :" << loginResponse.success() << std::endl;
+    std::cout << "-----callUserService------" << std::endl;
  
 
     return 0;

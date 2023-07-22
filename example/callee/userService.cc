@@ -9,7 +9,9 @@ class UserService : public::duan::UserServiceRpc
     public:
         bool Login(std::string name, std::string password)
         {
-            std::cout << "name : " << name << "password : " << password << std::endl;
+            
+            std::cout << "this is rpc login  " << std::endl;
+            std::cout << "name : " << name << "\npassword : " << password << std::endl;
             return true;
         }
         

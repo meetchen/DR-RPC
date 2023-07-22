@@ -95,11 +95,17 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     // 接收服务器的响应
     char buffer[1024] = {0};
     int bytesRead = recv(clientSocket, buffer, sizeof(buffer) - 1, 0);
-    if (bytesRead == -1) {
-        std::cerr << "Error: Receive failed" << std::endl;
+    if (bytesRead <= 0) {
+        if (bytesRead == 0) {
+            std::cerr << "Connection closed by peer" << std::endl;
+        } else {
+            std::cerr << "Error: Receive failed" << std::endl;
+        }
     } else {
         buffer[bytesRead] = '\0';
+        std::cout << "Received: " << buffer << std::endl;
     }
+
 
     // 关闭套接字
     close(clientSocket);
@@ -111,7 +117,14 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
         exit(EXIT_FAILURE);
     }
 
-    std::cout << "Send over !" << std::endl;
+     // 打印调试信息
+    std::cout << "===============DrRpcChannel=====================" << std::endl;
+    std::cout << "header_size: " << headerStrLen << std::endl;
+    std::cout << "rpc_header_str: " << headerStr << std::endl;
+    std::cout << "service_name: " << service->name() << std::endl;
+    std::cout << "method_name: " << method->name()<< std::endl;
+    std::cout << "args_str: " << requstStr << std::endl;
+    std::cout << "===============DrRpcChannel===================" << std::endl;
 
 
 }

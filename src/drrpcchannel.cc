@@ -8,7 +8,8 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <unistd.h>
-
+#include <memory>
+#include <functional>
 
 void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
                 google::protobuf::RpcController *controller, const google::protobuf::Message *request,
@@ -57,6 +58,15 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     // 协议指定了与套接字一起使用的特定协议。 通常情况下，在给定的协议族中，只有一种协议支持特定的套接字类型，在这种情况下，protocol 可以指定为 0。
     // TODO: 可以使用智能指针 管理这个描述符 从而自动关闭
     int clientSocket = socket(AF_INET, SOCK_STREAM, 0);
+
+    // 使用unique_ptr 自定义删除器 管理clienSocket 
+    // 即栈上的对象退出作用域时，会自动析构，调用clientPtr的析构函数，析构函数中执行删除器
+    std::unique_ptr<int, std::function<void(int *)>> clientPtr(&clientSocket, 
+            [](int *fd){
+                std::cout << "ClientSocket closed " << std::endl;
+                close(*fd);
+            });
+
     if (clientSocket == -1) {
         std::cerr << "Error: Could not create socket" << std::endl;
         exit(EXIT_FAILURE);
@@ -80,7 +90,6 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     // 连接服务器
     if (connect(clientSocket, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) == -1) {
         std::cerr << "Error: Connection failed" << std::endl;
-        close(clientSocket);
         exit(EXIT_FAILURE);
     }
     
@@ -106,9 +115,6 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
         std::cout << "Received: " << buffer << std::endl;
     }
 
-
-    // 关闭套接字
-    close(clientSocket);
 
     // 将最终的结果写回到response
     if (!response->ParseFromString(buffer))

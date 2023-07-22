@@ -24,6 +24,7 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     if (!request->SerializeToString(&requstStr))
     {
         std::cout << "Serialize to string error for " << method->name() << std::endl;
+        controller->SetFailed("Serialize to string error for requsetStr");
         return;
     }
 
@@ -36,6 +37,7 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     if (!rpcHeader.SerializeToString(&headerStr))
     {
         std::cout << "Serialize to string error for " << method->name() << std::endl;
+        controller->SetFailed("Serialize to string error for headerStr");
         return;
     }
 
@@ -69,7 +71,8 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
 
     if (clientSocket == -1) {
         std::cerr << "Error: Could not create socket" << std::endl;
-        exit(EXIT_FAILURE);
+        controller->SetFailed("Error: Could not create socket");
+        return;
     }
 
     // 从配置文件获取ip地址与端口号
@@ -90,7 +93,8 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     // 连接服务器
     if (connect(clientSocket, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) == -1) {
         std::cerr << "Error: Connection failed" << std::endl;
-        exit(EXIT_FAILURE);
+        controller->SetFailed("Error: Connection failed");
+        return;
     }
     
 
@@ -99,6 +103,8 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     
     if (send(clientSocket, headerStr.c_str(), headerStr.size(), 0) != messageLen) {
         std::cerr << "Error: Send failed" << std::endl;
+        controller->SetFailed("Error: Send failed");
+        return;
     }
 
     // 接收服务器的响应
@@ -110,6 +116,8 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
         } else {
             std::cerr << "Error: Receive failed" << std::endl;
         }
+        controller->SetFailed("Error: Receive failed");
+        return;
     } else {
         buffer[bytesRead] = '\0';
         std::cout << "Received: " << buffer << std::endl;
@@ -120,7 +128,8 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     if (!response->ParseFromString(buffer))
     {
         std::cout << "Parse From String Error " << std::endl;
-        exit(EXIT_FAILURE);
+        controller->SetFailed("Parse From String Error ");
+        return;
     }
 
      // 打印调试信息

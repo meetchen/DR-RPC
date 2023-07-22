@@ -9,6 +9,7 @@ cd build
 if [[ "$1" == "-c" ]]; then
     # 执行命令：make clean
     make clean
+    echo "Cleaning completed."
 fi
 
 # 执行命令：make

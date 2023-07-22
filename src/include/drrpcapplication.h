@@ -1,5 +1,9 @@
 #pragma once
 #include "drrpcconfig.h"
+#include "drrpcchannel.h"
+#include "drrpccontroller.h"
+
+
 class DrRpcApplication
 {
 public:

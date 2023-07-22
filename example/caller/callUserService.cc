@@ -15,11 +15,16 @@ int main(int argc, char **argv)
     loginRequst.set_password("password");
 
     duan::LoginResponse loginResponse;
-    
-    stub.Login(nullptr, &loginRequst, &loginResponse, nullptr);
+    DrRpcController controller;
+
+    stub.Login(&controller, &loginRequst, &loginResponse, nullptr);
 
     auto msg = loginResponse.msg();
-
+    if (controller.Failed())
+    {
+        std::cout << controller.ErrorText() << std::endl;
+        return 0;
+    }
     std::cout << "-----callUserService LoginRequest------" << std::endl;
     std::cout << "stateCode :" << msg.statecode() << std::endl;
     std::cout << "mgs :" << msg.msg() << std::endl;

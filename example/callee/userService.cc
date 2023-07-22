@@ -32,6 +32,32 @@ class UserService : public::duan::UserServiceRpc
 
             done->Run();
         }
+
+        void Register(std::string& name, std::string& password)
+        {
+            std::cout << "this is local Register" << std::endl;
+            return;
+        }
+
+        void Register(::google::protobuf::RpcController* controller,
+                    const ::duan::RegisterRequest* request,
+                    ::duan::RegisterRespone* response,
+                    ::google::protobuf::Closure* done)
+        {
+            std::string name = request->name();
+            std::string password = request->password();
+            Register(name, password);
+            
+            duan::ResultMsg *msg = response->mutable_msg();
+            msg->set_statecode(200);
+            msg->set_msg("register finish");
+
+            done->Run();
+
+            return;
+        }
+
+
 };
 
 void weclomeInfo()

@@ -9,7 +9,7 @@ int main(int argc, char **argv)
 
     duan::UserServiceRpc_Stub stub(new DrRpcChannel());
 
-    // 封装传入的参数
+    //  请求login方法 封装传入的参数
     duan::LoginRequest loginRequst;
     loginRequst.set_name("duanran");
     loginRequst.set_password("password");
@@ -20,12 +20,25 @@ int main(int argc, char **argv)
 
     auto msg = loginResponse.msg();
 
-    std::cout << "-----callUserService------" << std::endl;
+    std::cout << "-----callUserService LoginRequest------" << std::endl;
     std::cout << "stateCode :" << msg.statecode() << std::endl;
     std::cout << "mgs :" << msg.msg() << std::endl;
     std::cout << "success :" << loginResponse.success() << std::endl;
-    std::cout << "-----callUserService------" << std::endl;
- 
+    std::cout << "-----callUserService LoginRequest------" << std::endl;
+    
+    // 请求register 方法
+    duan::RegisterRequest regReq;
+    duan::RegisterRespone regResp;
+    
+    regReq.set_name("kill joy");
+    regReq.set_password("joy kill");
+
+    stub.Register(nullptr, &regReq, &regResp, nullptr);
+    auto regMsg = regResp.msg();
+    std::cout << "-----callUserService RegisterRequest------" << std::endl;
+    std::cout << "stateCode :" << regMsg.statecode() << std::endl;
+    std::cout << "mgs :" << regMsg.msg() << std::endl;
+    std::cout << "-----callUserService RegisterRequest------" << std::endl;
 
     return 0;
 }

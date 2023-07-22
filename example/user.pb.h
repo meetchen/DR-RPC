@@ -52,6 +52,12 @@ extern LoginRequestDefaultTypeInternal _LoginRequest_default_instance_;
 class LoginResponse;
 struct LoginResponseDefaultTypeInternal;
 extern LoginResponseDefaultTypeInternal _LoginResponse_default_instance_;
+class RegisterRequest;
+struct RegisterRequestDefaultTypeInternal;
+extern RegisterRequestDefaultTypeInternal _RegisterRequest_default_instance_;
+class RegisterRespone;
+struct RegisterResponeDefaultTypeInternal;
+extern RegisterResponeDefaultTypeInternal _RegisterRespone_default_instance_;
 class ResultMsg;
 struct ResultMsgDefaultTypeInternal;
 extern ResultMsgDefaultTypeInternal _ResultMsg_default_instance_;
@@ -59,6 +65,8 @@ extern ResultMsgDefaultTypeInternal _ResultMsg_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
 template<> ::duan::LoginRequest* Arena::CreateMaybeMessage<::duan::LoginRequest>(Arena*);
 template<> ::duan::LoginResponse* Arena::CreateMaybeMessage<::duan::LoginResponse>(Arena*);
+template<> ::duan::RegisterRequest* Arena::CreateMaybeMessage<::duan::RegisterRequest>(Arena*);
+template<> ::duan::RegisterRespone* Arena::CreateMaybeMessage<::duan::RegisterRespone>(Arena*);
 template<> ::duan::ResultMsg* Arena::CreateMaybeMessage<::duan::ResultMsg>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace duan {
@@ -564,6 +572,332 @@ class LoginResponse final :
   union { Impl_ _impl_; };
   friend struct ::TableStruct_user_2eproto;
 };
+// -------------------------------------------------------------------
+
+class RegisterRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:duan.RegisterRequest) */ {
+ public:
+  inline RegisterRequest() : RegisterRequest(nullptr) {}
+  ~RegisterRequest() override;
+  explicit PROTOBUF_CONSTEXPR RegisterRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  RegisterRequest(const RegisterRequest& from);
+  RegisterRequest(RegisterRequest&& from) noexcept
+    : RegisterRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline RegisterRequest& operator=(const RegisterRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RegisterRequest& operator=(RegisterRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const RegisterRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const RegisterRequest* internal_default_instance() {
+    return reinterpret_cast<const RegisterRequest*>(
+               &_RegisterRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(RegisterRequest& a, RegisterRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RegisterRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RegisterRequest* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  RegisterRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RegisterRequest>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const RegisterRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RegisterRequest& from) {
+    RegisterRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RegisterRequest* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "duan.RegisterRequest";
+  }
+  protected:
+  explicit RegisterRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNameFieldNumber = 1,
+    kPasswordFieldNumber = 2,
+  };
+  // bytes name = 1;
+  void clear_name();
+  const std::string& name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_name();
+  PROTOBUF_NODISCARD std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // bytes password = 2;
+  void clear_password();
+  const std::string& password() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_password(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_password();
+  PROTOBUF_NODISCARD std::string* release_password();
+  void set_allocated_password(std::string* password);
+  private:
+  const std::string& _internal_password() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_password(const std::string& value);
+  std::string* _internal_mutable_password();
+  public:
+
+  // @@protoc_insertion_point(class_scope:duan.RegisterRequest)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr password_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_user_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RegisterRespone final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:duan.RegisterRespone) */ {
+ public:
+  inline RegisterRespone() : RegisterRespone(nullptr) {}
+  ~RegisterRespone() override;
+  explicit PROTOBUF_CONSTEXPR RegisterRespone(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  RegisterRespone(const RegisterRespone& from);
+  RegisterRespone(RegisterRespone&& from) noexcept
+    : RegisterRespone() {
+    *this = ::std::move(from);
+  }
+
+  inline RegisterRespone& operator=(const RegisterRespone& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RegisterRespone& operator=(RegisterRespone&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const RegisterRespone& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const RegisterRespone* internal_default_instance() {
+    return reinterpret_cast<const RegisterRespone*>(
+               &_RegisterRespone_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  friend void swap(RegisterRespone& a, RegisterRespone& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RegisterRespone* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RegisterRespone* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  RegisterRespone* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RegisterRespone>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const RegisterRespone& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RegisterRespone& from) {
+    RegisterRespone::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RegisterRespone* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "duan.RegisterRespone";
+  }
+  protected:
+  explicit RegisterRespone(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMsgFieldNumber = 1,
+  };
+  // .duan.ResultMsg msg = 1;
+  bool has_msg() const;
+  private:
+  bool _internal_has_msg() const;
+  public:
+  void clear_msg();
+  const ::duan::ResultMsg& msg() const;
+  PROTOBUF_NODISCARD ::duan::ResultMsg* release_msg();
+  ::duan::ResultMsg* mutable_msg();
+  void set_allocated_msg(::duan::ResultMsg* msg);
+  private:
+  const ::duan::ResultMsg& _internal_msg() const;
+  ::duan::ResultMsg* _internal_mutable_msg();
+  public:
+  void unsafe_arena_set_allocated_msg(
+      ::duan::ResultMsg* msg);
+  ::duan::ResultMsg* unsafe_arena_release_msg();
+
+  // @@protoc_insertion_point(class_scope:duan.RegisterRespone)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::duan::ResultMsg* msg_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_user_2eproto;
+};
 // ===================================================================
 
 class UserServiceRpc_Stub;
@@ -582,6 +916,10 @@ class UserServiceRpc : public ::PROTOBUF_NAMESPACE_ID::Service {
   virtual void Login(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
                        const ::duan::LoginRequest* request,
                        ::duan::LoginResponse* response,
+                       ::google::protobuf::Closure* done);
+  virtual void Register(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                       const ::duan::RegisterRequest* request,
+                       ::duan::RegisterRespone* response,
                        ::google::protobuf::Closure* done);
 
   // implements Service ----------------------------------------------
@@ -615,6 +953,10 @@ class UserServiceRpc_Stub : public UserServiceRpc {
   void Login(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
                        const ::duan::LoginRequest* request,
                        ::duan::LoginResponse* response,
+                       ::google::protobuf::Closure* done);
+  void Register(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                       const ::duan::RegisterRequest* request,
+                       ::duan::RegisterRespone* response,
                        ::google::protobuf::Closure* done);
  private:
   ::PROTOBUF_NAMESPACE_ID::RpcChannel* channel_;
@@ -922,9 +1264,211 @@ inline void LoginResponse::set_success(bool value) {
   // @@protoc_insertion_point(field_set:duan.LoginResponse.success)
 }
 
+// -------------------------------------------------------------------
+
+// RegisterRequest
+
+// bytes name = 1;
+inline void RegisterRequest::clear_name() {
+  _impl_.name_.ClearToEmpty();
+}
+inline const std::string& RegisterRequest::name() const {
+  // @@protoc_insertion_point(field_get:duan.RegisterRequest.name)
+  return _internal_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RegisterRequest::set_name(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:duan.RegisterRequest.name)
+}
+inline std::string* RegisterRequest::mutable_name() {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:duan.RegisterRequest.name)
+  return _s;
+}
+inline const std::string& RegisterRequest::_internal_name() const {
+  return _impl_.name_.Get();
+}
+inline void RegisterRequest::_internal_set_name(const std::string& value) {
+  
+  _impl_.name_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RegisterRequest::_internal_mutable_name() {
+  
+  return _impl_.name_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RegisterRequest::release_name() {
+  // @@protoc_insertion_point(field_release:duan.RegisterRequest.name)
+  return _impl_.name_.Release();
+}
+inline void RegisterRequest::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.name_.SetAllocated(name, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.name_.IsDefault()) {
+    _impl_.name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:duan.RegisterRequest.name)
+}
+
+// bytes password = 2;
+inline void RegisterRequest::clear_password() {
+  _impl_.password_.ClearToEmpty();
+}
+inline const std::string& RegisterRequest::password() const {
+  // @@protoc_insertion_point(field_get:duan.RegisterRequest.password)
+  return _internal_password();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RegisterRequest::set_password(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.password_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:duan.RegisterRequest.password)
+}
+inline std::string* RegisterRequest::mutable_password() {
+  std::string* _s = _internal_mutable_password();
+  // @@protoc_insertion_point(field_mutable:duan.RegisterRequest.password)
+  return _s;
+}
+inline const std::string& RegisterRequest::_internal_password() const {
+  return _impl_.password_.Get();
+}
+inline void RegisterRequest::_internal_set_password(const std::string& value) {
+  
+  _impl_.password_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RegisterRequest::_internal_mutable_password() {
+  
+  return _impl_.password_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RegisterRequest::release_password() {
+  // @@protoc_insertion_point(field_release:duan.RegisterRequest.password)
+  return _impl_.password_.Release();
+}
+inline void RegisterRequest::set_allocated_password(std::string* password) {
+  if (password != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.password_.SetAllocated(password, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.password_.IsDefault()) {
+    _impl_.password_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:duan.RegisterRequest.password)
+}
+
+// -------------------------------------------------------------------
+
+// RegisterRespone
+
+// .duan.ResultMsg msg = 1;
+inline bool RegisterRespone::_internal_has_msg() const {
+  return this != internal_default_instance() && _impl_.msg_ != nullptr;
+}
+inline bool RegisterRespone::has_msg() const {
+  return _internal_has_msg();
+}
+inline void RegisterRespone::clear_msg() {
+  if (GetArenaForAllocation() == nullptr && _impl_.msg_ != nullptr) {
+    delete _impl_.msg_;
+  }
+  _impl_.msg_ = nullptr;
+}
+inline const ::duan::ResultMsg& RegisterRespone::_internal_msg() const {
+  const ::duan::ResultMsg* p = _impl_.msg_;
+  return p != nullptr ? *p : reinterpret_cast<const ::duan::ResultMsg&>(
+      ::duan::_ResultMsg_default_instance_);
+}
+inline const ::duan::ResultMsg& RegisterRespone::msg() const {
+  // @@protoc_insertion_point(field_get:duan.RegisterRespone.msg)
+  return _internal_msg();
+}
+inline void RegisterRespone::unsafe_arena_set_allocated_msg(
+    ::duan::ResultMsg* msg) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.msg_);
+  }
+  _impl_.msg_ = msg;
+  if (msg) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:duan.RegisterRespone.msg)
+}
+inline ::duan::ResultMsg* RegisterRespone::release_msg() {
+  
+  ::duan::ResultMsg* temp = _impl_.msg_;
+  _impl_.msg_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::duan::ResultMsg* RegisterRespone::unsafe_arena_release_msg() {
+  // @@protoc_insertion_point(field_release:duan.RegisterRespone.msg)
+  
+  ::duan::ResultMsg* temp = _impl_.msg_;
+  _impl_.msg_ = nullptr;
+  return temp;
+}
+inline ::duan::ResultMsg* RegisterRespone::_internal_mutable_msg() {
+  
+  if (_impl_.msg_ == nullptr) {
+    auto* p = CreateMaybeMessage<::duan::ResultMsg>(GetArenaForAllocation());
+    _impl_.msg_ = p;
+  }
+  return _impl_.msg_;
+}
+inline ::duan::ResultMsg* RegisterRespone::mutable_msg() {
+  ::duan::ResultMsg* _msg = _internal_mutable_msg();
+  // @@protoc_insertion_point(field_mutable:duan.RegisterRespone.msg)
+  return _msg;
+}
+inline void RegisterRespone::set_allocated_msg(::duan::ResultMsg* msg) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete _impl_.msg_;
+  }
+  if (msg) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(msg);
+    if (message_arena != submessage_arena) {
+      msg = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, msg, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.msg_ = msg;
+  // @@protoc_insertion_point(field_set_allocated:duan.RegisterRespone.msg)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

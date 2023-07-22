@@ -22,7 +22,20 @@ message LoginResponse
     bool success = 2;
 }
 
+message RegisterRequest
+{
+    bytes name = 1;
+    bytes password = 2;
+}
+
+message RegisterRespone
+{
+    ResultMsg msg = 1;
+}
+
+
 service UserServiceRpc
 {
     rpc Login(LoginRequest) returns (LoginResponse);
+    rpc Register(RegisterRequest) returns (RegisterRespone);
 }

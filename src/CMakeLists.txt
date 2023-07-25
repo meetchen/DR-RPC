@@ -4,4 +4,4 @@ aux_source_directory(. SRC_LIST)
 add_library(drrpc ${SRC_LIST})
 
 # 连接muduo库时 先连接net
-target_link_libraries(drrpc muduo_net muduo_base pthread)
+target_link_libraries(drrpc muduo_net muduo_base pthread zookeeper_mt)

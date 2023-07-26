@@ -3,7 +3,7 @@
 #include "drrpcchannel.h"
 #include "drrpccontroller.h"
 #include "drrpclogger.h"
-
+#include "zookeeperutil.h"
 
 class DrRpcApplication
 {

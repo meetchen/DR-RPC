@@ -81,11 +81,11 @@ int main(int argc, char **argv)
 {
     weclomeInfo();
 
-    LOG_INFO("ddddd");
-    LOG_ERR("GGGGG");
-
     //初始化框架
     DrRpcApplication::Init(argc, argv);
+
+    ZkClient zkClient;
+    zkClient.start();
 
     // 发布rpc
     RpcProvider pro;

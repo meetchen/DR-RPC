@@ -24,7 +24,7 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     std::string requstStr;
     if (!request->SerializeToString(&requstStr))
     {
-        std::cout << "Serialize to string error for " << method->name() << std::endl;
+        LOG_ERR("Serialize to string error for requsetStr");
         controller->SetFailed("Serialize to string error for requsetStr");
         return;
     }
@@ -37,7 +37,7 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     std::string headerStr;
     if (!rpcHeader.SerializeToString(&headerStr))
     {
-        std::cout << "Serialize to string error for " << method->name() << std::endl;
+        LOG_ERR("Serialize to string error for headerStr");
         controller->SetFailed("Serialize to string error for headerStr");
         return;
     }
@@ -66,12 +66,12 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     // 即栈上的对象退出作用域时，会自动析构，调用clientPtr的析构函数，析构函数中执行删除器
     std::unique_ptr<int, std::function<void(int *)>> clientPtr(&clientSocket, 
             [](int *fd){
-                std::cout << "ClientSocket closed " << std::endl;
+                LOG_ERR("ClientSocket closed ");
                 close(*fd);
             });
 
     if (clientSocket == -1) {
-        std::cerr << "Error: Could not create socket" << std::endl;
+        LOG_ERR("Could not create socket");
         controller->SetFailed("Error: Could not create socket");
         return;
     }
@@ -100,7 +100,6 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     std::string ip = info.substr(0, pos);
     uint32_t port = atoi(info.substr(pos + 1).c_str());
 
-    std::cout << port << " : " << ip << std::endl;
 
     // 设置服务器地址和端口
     struct sockaddr_in serverAddr;
@@ -114,6 +113,7 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     // 连接服务器
     if (connect(clientSocket, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) == -1) {
         std::cerr << "Error: Connection failed" << std::endl;
+        LOG_ERR("Error: Connection failed");
         controller->SetFailed("Error: Connection failed");
         return;
     }
@@ -124,6 +124,8 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     
     if (send(clientSocket, headerStr.c_str(), headerStr.size(), 0) != messageLen) {
         std::cerr << "Error: Send failed" << std::endl;
+        LOG_ERR("Error: Send failed");
+
         controller->SetFailed("Error: Send failed");
         return;
     }
@@ -133,8 +135,10 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     int bytesRead = recv(clientSocket, buffer, sizeof(buffer) - 1, 0);
     if (bytesRead <= 0) {
         if (bytesRead == 0) {
+            LOG_ERR("Connection closed by peer");
             std::cerr << "Connection closed by peer" << std::endl;
         } else {
+            LOG_ERR("Error: Receive failed");
             std::cerr << "Error: Receive failed" << std::endl;
         }
         controller->SetFailed("Error: Receive failed");
@@ -149,18 +153,19 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     if (!response->ParseFromString(buffer))
     {
         std::cout << "Parse From String Error " << std::endl;
+        LOG_ERR("Parse From String Error ");
         controller->SetFailed("Parse From String Error ");
         return;
     }
 
      // 打印调试信息
-    std::cout << "===============DrRpcChannel=====================" << std::endl;
-    std::cout << "header_size: " << headerStrLen << std::endl;
-    std::cout << "rpc_header_str: " << headerStr << std::endl;
-    std::cout << "service_name: " << service->name() << std::endl;
-    std::cout << "method_name: " << method->name()<< std::endl;
-    std::cout << "args_str: " << requstStr << std::endl;
-    std::cout << "===============DrRpcChannel===================" << std::endl;
+    // std::cout << "===============DrRpcChannel=====================" << std::endl;
+    // std::cout << "header_size: " << headerStrLen << std::endl;
+    // std::cout << "rpc_header_str: " << headerStr << std::endl;
+    // std::cout << "service_name: " << service->name() << std::endl;
+    // std::cout << "method_name: " << method->name()<< std::endl;
+    // std::cout << "args_str: " << requstStr << std::endl;
+    // std::cout << "===============DrRpcChannel===================" << std::endl;
 
 
 }

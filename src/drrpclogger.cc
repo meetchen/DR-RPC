@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include <experimental/filesystem>
-
+#include <netinet/tcp.h>
 // 将日志写入到缓冲区 队列
 void DrRpcLogger::log(std::string data)
 {
@@ -24,7 +24,7 @@ DrRpcLogger::DrRpcLogger()
     {
         if (!std::experimental::filesystem::exists("log") || !std::experimental::filesystem::is_directory("log"))
         {
-            LOG_INFO("log dir is not exists");
+            LOG_ERR("log dir is not exists");
             if (std::experimental::filesystem::create_directory("log"))
             {
                 LOG_INFO("mkdir log success ");

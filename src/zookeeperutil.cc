@@ -69,9 +69,19 @@ void ZkClient::start()
      * \brief set the context for this handle.
      */
     zoo_set_context(m_zhandle, &sem);
-
-    sem_wait(&sem);
-
+    
+    // 如果服务器没有启动就会一直死等，所以应该使用带有超时时间的等待
+    // sem_wait(&sem);
+    timespec ts;
+    clock_gettime(CLOCK_REALTIME, &ts); //获取当前时间
+    ts.tv_sec += 3;		//现在ts为3秒后的时间
+    if (-1 == sem_timedwait(&sem, &ts) && errno == ETIMEDOUT)
+    {
+        LOG_ERR("Zookeeper init timeout , please check zookeeper server or other");
+        std::cout << "Zookeeper init timeout , please check zookeeper server or other" << std::endl;
+        exit(EXIT_FAILURE);
+    }
+    sem_destroy(&sem);
     LOG_INFO("Zookeeper init Finish ");
 
 }

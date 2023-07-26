@@ -8,6 +8,8 @@
 #include <muduo/net/TcpConnection.h>
 #include "drrpcheader.pb.h"
 #include "zookeeperutil.h"
+#include <time.h>
+
 
 void RpcProvider::NofityService(google::protobuf::Service *service)
 {
@@ -122,27 +124,40 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net
     else
     {
         // 数据头反序列化失败
-        std::cout << "rpc_header_str:" << rpc_header_str << " parse error!" << std::endl;
+        std::string info = "rpc_header_str:" + rpc_header_str + " parse error!" ;
+        std::cout << info << std::endl;
+        LOG_ERR(info.c_str());
         return;
     }
 
     // 获取rpc方法参数的字符流数据
     std::string args_str = recv_buf.substr(4 + header_size, args_size);
 
+    
     // 打印调试信息
-    std::cout << "===============RpcProvider=====================" << std::endl;
-    std::cout << "header_size: " << header_size << std::endl;
-    std::cout << "rpc_header_str: " << rpc_header_str << std::endl;
-    std::cout << "service_name: " << service_name << std::endl;
-    std::cout << "method_name: " << method_name << std::endl;
-    std::cout << "args_str: " << args_str << std::endl;
-    std::cout << "===============RpcProvider===================" << std::endl;
+    // std::cout << "===============RpcProvider=====================" << std::endl;
+    // std::cout << "header_size: " << header_size << std::endl;
+    // std::cout << "rpc_header_str: " << rpc_header_str << std::endl;
+    // std::cout << "service_name: " << service_name << std::endl;
+    // std::cout << "method_name: " << method_name << std::endl;
+    // std::cout << "args_str: " << args_str << std::endl;
+    // std::cout << "===============RpcProvider===================" << std::endl;
+
+    // 将获取的调用请求 封装 写入到 log中
+    // 获取调用方的ip地址与端口号
+    std::string ipPort = conn -> peerAddress().toIpPort();
+    // 组装log信息
+    std::string log = ipPort + " Request Service : " + service_name + "/" + method_name;
+    LOG_INFO(log.c_str());
+    std::cout << log << std::endl;
 
     // 获取service对象
     auto serviceInfoIt = serviceMap.find(service_name);
     if (serviceInfoIt == serviceMap.end())
     {
-        std::cout << "Don't find " << service_name << std::endl;
+        std::string info = "Can't find " + service_name;
+        LOG_ERR(info.c_str());
+        std::cout << info << std::endl;
         return;
     }
 
@@ -152,7 +167,9 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net
     auto methodIt = methodMap.find(method_name);
     if (methodIt == methodMap.end())
     {
-        std::cout << "Don't find " << method_name << std::endl;
+        std::string info = "Can't find " + method_name;
+        LOG_ERR(info.c_str());
+        std::cout << info << std::endl;
         return;
     }
     auto method = methodIt->second;
@@ -221,6 +238,7 @@ void RpcProvider::sendRpcResponse(const muduo::net::TcpConnectionPtr &conn, goog
     std::string responseStr;
     if (!resp->SerializeToString(&responseStr))
     {
+        LOG_ERR(" Send Back failure ");
         std::cout << " Send Back failure " << std::endl;
         exit(EXIT_FAILURE);
     } 

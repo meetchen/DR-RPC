@@ -2,6 +2,9 @@
 cmake_minimum_required(VERSION 3.0)
 project(DR-RPC)
 
+# 明确设置 C++11 标准
+set(CMAKE_CXX_STANDARD 11)
+
 # 声明 C++ 编译选项，包括调试信息
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 

@@ -30,7 +30,7 @@ DrRpcLogger::DrRpcLogger()
             FILE *pf = fopen(fileName, "a+");
             if (pf == nullptr)
             {
-                std::cout << fileName << "open error " << std::endl;
+                std::cout << fileName << " open error " << std::endl;
                 exit(EXIT_FAILURE);
             }
             std::string msg = queue.pop();

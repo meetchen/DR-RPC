@@ -7,6 +7,7 @@
 #include <google/protobuf/message.h>
 #include <muduo/net/TcpConnection.h>
 #include "drrpcheader.pb.h"
+#include "zookeeperutil.h"
 
 void RpcProvider::NofityService(google::protobuf::Service *service)
 {
@@ -54,6 +55,28 @@ void RpcProvider::Run()
 
     // rpc服务端准备启动，打印信息
     std::cout << "RpcProvider start service at ip: " << ip << " port:" << port << std::endl;
+
+  
+    // 注册zookeeper服务
+    // eventLoop.loop(); 一直存在ZkClient，不会被析构，除非关闭drrpc服务
+    ZkClient zkClient;
+    zkClient.start();
+
+    for (auto &service : serviceMap)
+    {
+        auto &serviceName = service.first;
+        auto &serviceINfo = service.second.methodMap;
+        std::string path = '/' + serviceName;
+        zkClient.create(path.c_str(),nullptr, 0, 0);
+
+        for (auto& func : serviceINfo)
+        {
+            std::string funcPath = path + '/' + func.first;
+            std::string data = ip + ":" + std::to_string(port);
+            // ZOO_EPHEMERAL 临时性节点
+            zkClient.create(funcPath.c_str(), data.c_str(), data.size(), ZOO_EPHEMERAL);
+        }
+    }
 
     // 启动网络服务
     server.start();

@@ -10,6 +10,7 @@
 #include <unistd.h>
 #include <memory>
 #include <functional>
+#include <zookeeperutil.h>
 
 void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
                 google::protobuf::RpcController *controller, const google::protobuf::Message *request,
@@ -75,11 +76,31 @@ void DrRpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
         return;
     }
 
-    // 从配置文件获取ip地址与端口号
-    DrRpcConfig& config = DrRpcApplication::getConfigMap();
-    uint32_t port = atoi(config.getConfig("rpcserverport").c_str());
-    std::string ip = config.getConfig("rpcserverip");
+    // 从配置文件获取ip地址与端口号 
+    // DrRpcConfig& config = DrRpcApplication::getConfigMap();
+    // uint32_t port = atoi(config.getConfig("rpcserverport").c_str());
+    // std::string ip = config.getConfig("rpcserverip");
 
+    // 从zookeeper获取对应服务的ip地址与端口号
+    ZkClient zkClient;
+    zkClient.start();
+    std::string path = "/" + service->name() + '/' + method -> name();
+    std::string info = zkClient.getData(path.c_str());
+    if (info == "")
+    {
+        LOG_ERR("GET ip info error from zookeeper");
+        return;
+    }
+    int pos = info.find(':');
+    if (pos == -1)
+    {   
+        LOG_ERR("ip info parse error from zookeeper");
+        return;
+    }
+    std::string ip = info.substr(0, pos);
+    uint32_t port = atoi(info.substr(pos + 1).c_str());
+
+    std::cout << port << " : " << ip << std::endl;
 
     // 设置服务器地址和端口
     struct sockaddr_in serverAddr;

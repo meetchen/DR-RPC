@@ -84,9 +84,6 @@ int main(int argc, char **argv)
     //初始化框架
     DrRpcApplication::Init(argc, argv);
 
-    ZkClient zkClient;
-    zkClient.start();
-
     // 发布rpc
     RpcProvider pro;
     pro.NofityService(new UserService());

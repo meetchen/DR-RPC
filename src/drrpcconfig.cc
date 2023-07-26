@@ -51,5 +51,6 @@ std::string DrRpcConfig::getConfig(const char *key)
 {
     if (myConfigMap.count(key))
         return myConfigMap[key];
+    
     return "";
 }

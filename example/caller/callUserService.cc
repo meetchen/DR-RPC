@@ -6,7 +6,6 @@
 int main(int argc, char **argv)
 {
     DrRpcApplication::Init(argc, argv);
-
     duan::UserServiceRpc_Stub stub(new DrRpcChannel());
 
     //  请求login方法 封装传入的参数
